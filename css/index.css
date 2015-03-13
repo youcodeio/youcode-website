@@ -1,14 +1,22 @@
 /*CSS Youcode pour le fichier index.html*/
 
 .toto{
-    background-image: url(background/fond6.png);
+    background-Color: rgb(230, 230, 230);
     width: 100%;
     height: 300px;
 }
 
 .trolo{
     position: relative;
-     color: white;
+
     top: 200px;
-    
+}
+
+.title{
+    font-weight: 100;
+   
+}
+
+.videoTitle{
+    overflow: auto;
 }

@@ -15,14 +15,14 @@
         <link rel="stylesheet" href="css/index.css">
         
         <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
 
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body class="grey darken-3">
+    <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -31,7 +31,7 @@
         
         <!-- Navigation bar -->
           <nav>
-            <div class="nav-wrapper">
+            <div class="nav-wrapper red">
               <a href="#!" class="brand-logo">Logo</a>
               <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
               <ul class="right hide-on-med-and-down">
@@ -48,44 +48,65 @@
           </nav>
           
           <div class="row toto">
-            <div class="col s6 offset-s6 grid-example">
+            <div class="col s8 offset-s4 grid-example">
                <span class="flow-text trolo">
-                    <div class="input-field col s6 ">
+                    <div class="input-field col s6">
                         <i class="mdi-action-search prefix"></i>
                         <input id="icon_prefix" type="text" class="validate">
                         <label for="icon_prefix white">Search</label>
                     </div>      
+                    <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-action-done"></i></a>
                 </span>
             </div>
         </div>
-      <div class="container white">
+      <div class="container">
         <!-- Page Content goes here -->
+        <div class="row">
+            <div class="col s10 valign-wrapper">
+              <h3 class="valign title">Result of YouCode search</h5>
+            </div>
+              <div class="preloader-wrapper big active ">
+                <div class="spinner-layer spinner-red-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+       
         
-        
-        
-        
+          </div>
         <div class="row">
           
           
         <div class="col s12 grid-example"><span class="flow-text">
             <ul class="collapsible" data-collapsible="accordion">
-                <li>
-                  <div class="collapsible-header"><i class="mdi-av-play-circle-fill"></i>First</div>
-                  <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                <li class="col s12">
+                  <div class="collapsible-header"><i class="mdi-av-play-circle-fill"></i>
+                  
+                  <div class="col s9 videoTitle">Video Title </div>
+                  <div class="col s2">Video date</div>
+   
+
+                  </div>
+                  <div class="collapsible-body"><p>Description of the video</p></div>
                 </li>
-                <li>
+                <li class="col s12">
                   <div class="collapsible-header"><i class="mdi-av-play-circle-fill"></i>Second</div>
                   <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
                 </li>
-                <li>
+                <li class="col s12">
                   <div class="collapsible-header"><i class="mdi-av-play-circle-fill"></i>Third</div>
                   <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
                 </li>
-              <li>
+              <li class="col s12">
               <div class="collapsible-header"><i class="mdi-av-play-circle-fill"></i>Forth</div>
                   <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
                 </li>
-              <li>
+              <li class="col s12">
               <div class="collapsible-header"><i class="mdi-av-play-circle-fill"></i>Fifth</div>
                   <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
                 </li>
