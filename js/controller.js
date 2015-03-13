@@ -1,4 +1,4 @@
-var myApp = angular.module('youcodeio',['youtube-embed']);
+var myApp = angular.module('youcodeio',[]);
 
 myApp.service('googleService', ['$http', '$rootScope', '$q', function ($http, $rootScope, $q,$scope) {
 
