@@ -24,3 +24,11 @@ img{
     overflow: auto;
 }
 
+.youtube{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.video_description{
+    font-weight: 100;
+}
