@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="" ng-app='youcodeio'>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +22,7 @@
         
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body>
+    <body ng-controller='Ctrl'>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -42,7 +42,7 @@
               <ul class="side-nav" id="mobile-demo">
                 <li><a href="sass.html">Home</a></li>
                 <li><a href="components.html">About</a></li>
-                <li><a href="javascript.html">Chanels</a></li>
+                <li><a href="javascript.html">Channels</a></li>
               </ul>
             </div>
           </nav>
@@ -55,7 +55,7 @@
                         <input id="icon_prefix" type="text" class="validate">
                         <label for="icon_prefix white">Search</label>
                     </div>      
-                    <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-action-done"></i></a>
+                    <a class="btn-floating btn-large waves-effect waves-light red" ng-click="search()"><i class="mdi-action-done"></i></a>
                 </span>
             </div>
         </div>
@@ -83,32 +83,16 @@
           
           
         <div class="col s12 grid-example"><span class="flow-text">
-            <ul class="collapsible" data-collapsible="accordion">
-                <li class="col s12">
+            <ul class="collapsible" data-collapsible="accordion" >
+                <li class="col s12" ng-repeat="channel in channels track by $index">
                   <div class="collapsible-header"><i class="mdi-av-play-circle-fill"></i>
                   
-                  <div class="col s9 videoTitle">Video Title </div>
-                  <div class="col s2">Video date</div>
+                  <div class="col s9 videoTitle">{{channel.title}}</div>
+                  <div class="col s2">{{moment(channel.publishedAt, "YYYYMMDD").fromNow()}}</div>
    
 
                   </div>
-                  <div class="collapsible-body"><p>Description of the video</p></div>
-                </li>
-                <li class="col s12">
-                  <div class="collapsible-header"><i class="mdi-av-play-circle-fill"></i>Second</div>
-                  <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                </li>
-                <li class="col s12">
-                  <div class="collapsible-header"><i class="mdi-av-play-circle-fill"></i>Third</div>
-                  <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                </li>
-              <li class="col s12">
-              <div class="collapsible-header"><i class="mdi-av-play-circle-fill"></i>Forth</div>
-                  <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                </li>
-              <li class="col s12">
-              <div class="collapsible-header"><i class="mdi-av-play-circle-fill"></i>Fifth</div>
-                  <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                  <div class="collapsible-body"><p>{{channel.description}}</p></div>
                 </li>
               </ul>      
         </span></div>
@@ -125,11 +109,18 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
-      
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
       <script type="text/javascript" src="js/index.js"></script>
        <!--Import jQuery before materialize.js-->
        <script type="text/javascript" src="js/jQuery.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <!-- adding Google's official script -->
+        <script src="//apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.js"></script>
+        <script src="js/swag.js"></script>
+        <script src="js/controller.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

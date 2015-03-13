@@ -2,7 +2,7 @@ var myApp = angular.module('youcodeio',[]);
 
 myApp.service('googleService', ['$http', '$rootScope', '$q', function ($http, $rootScope, $q,$scope) {
 
-	var APIKEY = "API KEY";
+	var APIKEY = "KEY";
 
 	var deferred = $q.defer();
 
