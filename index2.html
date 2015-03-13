@@ -23,7 +23,8 @@
         <input ng-model="query">
         <button ng-click="search()" >Call !</button>
         <ul ng-repeat="channel in channels track by $index">
-            <li><div><h3>{{channel.title}}</h3><h4>{{channel.channelTitle}}</h4></div></li>
+            <li><div><h4>{{channel.channelTitle}} -- {{channel.title}}</h4><p>{{channel.description}}</p><p>{{channel.publishedAt}}</p>
+            <img ng-src="{{channel.thumbnails.default.url}}"></div></li>
         </ul>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

@@ -4,10 +4,6 @@ var youtube_channels = [
         "id": "UCVHFbqXqoYvEWM1Ddxl0QDg"
     },
     {
-        "name": "Ask A Dev",
-        "id": "UC4BAyz98GyC6-aUGHQBbfVQ"
-    },
-    {
         "name": "Cloudera, Inc.",
         "id": "UCXY5wm6HlBL_Y_8SDxJNR0g"
     },
@@ -78,5 +74,25 @@ var youtube_channels = [
     {
         "name": "vaadinofficial",
         "id": "UCsGakFIbOsj-fgPFLf1QlQA"
+    },
+    {
+        "name": "vМихаил Страшун",
+        "id": "UCaYYN56VR7Z4SSoO7ws0-jA"
+    },
+    {
+        "name": "Andrei Alexandrescu",
+        "id": "UCzYzlIaxNosNLAueoQaQYXw"
+    },
+    {
+        "name": "MeetingCPP",
+        "id": "UCJpMLydEYA08vusDkq3FmjQ"
+    },
+    {
+        "name": "Javaone",
+        "id": "UCmRtPmgnQ04CMUpSUqPfhxQ"
+    },
+    {
+        "name": "TwitterUniversity",
+        "id": "UCeDh9omC_xMKrar2srQZiLg"
     }
 ]
