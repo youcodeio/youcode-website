@@ -37,7 +37,7 @@
               <ul class="right hide-on-med-and-down">
                 <li><a href="sass.html">Home</a></li>
                 <li><a href="components.html">About</a></li>
-                <li><a href="javascript.html">Chanels</a></li>
+                <li><a href="javascript.html">Channels</a></li>
               </ul>
               <ul class="side-nav" id="mobile-demo">
                 <li><a href="sass.html">Home</a></li>
@@ -52,7 +52,7 @@
                <span class="flow-text trolo">
                     <div class="input-field col s6">
                         <i class="mdi-action-search prefix"></i>
-                        <input id="icon_prefix" type="text" class="validate">
+                        <input id="icon_prefix" type="text" class="validate" ng-model="query">
                         <label for="icon_prefix white">Search</label>
                     </div>      
                     <a class="btn-floating btn-large waves-effect waves-light red" ng-click="search()"><i class="mdi-action-done"></i></a>
@@ -65,7 +65,7 @@
             <div class="col s10 valign-wrapper">
               <h3 class="valign title">Result of YouCode search</h5>
             </div>
-              <div class="preloader-wrapper big active ">
+              <div class="preloader-wrapper big active" ng-if="unicorn">
                 <div class="spinner-layer spinner-red-only">
                   <div class="circle-clipper left">
                     <div class="circle"></div>

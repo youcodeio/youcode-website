@@ -35,7 +35,7 @@ myApp.controller('Ctrl', function ($q,$scope,googleService) {
 
 	$scope.search = function (){
 		var savePromises = [];
-
+		$scope.unicorn = true;
 		angular.forEach(youtube_channels, function(value,key) {
 			savePromises[key] = googleService.handleClientLoad($scope.query,value.id);
 
@@ -49,6 +49,8 @@ myApp.controller('Ctrl', function ($q,$scope,googleService) {
 		var videos = [];
 		$scope.channels = [];
 
+
+
 		angular.forEach(data, function(value,key) {
 			angular.forEach(value.items, function(result) {
 				result.snippet.publishedAt = new Date(result.snippet.publishedAt);
@@ -61,5 +63,6 @@ myApp.controller('Ctrl', function ($q,$scope,googleService) {
 			b = b.publishedAt;
 			return a>b ? -1 : a<b ? 1 : 0;
 		});
+		$scope.unicorn = false;
 	};
 });
