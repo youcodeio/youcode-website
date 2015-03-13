@@ -1,4 +1,4 @@
-var myApp = angular.module('youcodeio',[]);
+var myApp = angular.module('youcodeio',['youtube-embed']);
 
 myApp.service('googleService', ['$http', '$rootScope', '$q', function ($http, $rootScope, $q,$scope) {
 
@@ -15,7 +15,7 @@ this.handleClientLoad = function (q,id) {
 
 				request = gapi.client.youtube.search.list({
 					q: q,
-					part: 'snippet',
+					part: 'id,snippet',
 					channelId: id,
 					order: 'date',
 					type: 'video'
@@ -49,11 +49,10 @@ myApp.controller('Ctrl', function ($q,$scope,googleService) {
 		var videos = [];
 		$scope.channels = [];
 
-
-
 		angular.forEach(data, function(value,key) {
 			angular.forEach(value.items, function(result) {
 				result.snippet.publishedAt = new Date(result.snippet.publishedAt);
+				result.snippet.id = result.id.videoId;
 				videos.push(result.snippet);
 			});
 		});
