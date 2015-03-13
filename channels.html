@@ -12,7 +12,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/channels.css">
         
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
@@ -52,12 +52,40 @@
   
       <div class="container">
         <!-- Page Content goes here -->
-       
-      </div>
+        <div class="row">
+            <div class="col s10 valign-wrapper">
+              <h3 class="valign youcode_channels">YouCode channels</h5>
+            </div>
+        </div>
     
-        
+      
+     <div class="row">
+          
+        <div class="col s12 grid-example"><span class="flow-text">
+            <ul class="collapsible" data-collapsible="accordion" >
+                <li class="col s12" ng-repeat="channel in channels track by $index">
+                  <div class="collapsible-header"><i class="mdi-av-play-circle-fill"></i>
+                  
+                  <div class="col s9 videoTitle">{{channel.title}}</div>
+                  <div class="col s2">{{moment(channel.publishedAt, "YYYYMMDD").fromNow()}}</div>
+   
 
-        
+                  </div>
+                  <div class="collapsible-body">
+                  <embed class="col s12 youtube" type="text/html" height="400px"
+  src="http://www.youtube.com/embed/M7lc1UVf-VE?theme=light&autohide=1"
+                          frameborder="0">
+                          
+                  <p class="col s12 video_description">{{channel.description}} cazeiouh cia ceoazec oygaz ecoa ceagzecouyvazec oyazvecpuoyiazevcp azc ce ez ez coaz ecavzecoycv pezc cgi  croauv oazcrv aozrucv aozurcv ahjkrzcvb kajzhrcvljsc zoiauyrcg oayzurc aouyrzc aozrygc ozuyc oaryc aorzuyc ozarycf zac rzaiucgqldkjbalciu azegfiufehhdjkhd  jds d kuhd kdk h dkjqhdiezauy coezu afpugazefog azefoguzep </p>
+                  
+                  </div>
+                  
+                </li>
+              </ul>      
+        </span></div>
+        </div>
+
+        </div>    
     </body>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
