@@ -1,5 +1,8 @@
 /*CSS Youcode pour le fichier index.html*/
+img{
+    height: 50px;
 
+}
 .toto{
     background-Color: rgb(230, 230, 230);
     width: 100%;
@@ -20,3 +23,4 @@
 .videoTitle{
     overflow: auto;
 }
+
