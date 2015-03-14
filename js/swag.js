@@ -94,5 +94,13 @@ var youtube_channels = [
     {
         "name": "TwitterUniversity",
         "id": "UCeDh9omC_xMKrar2srQZiLg"
+    },
+    {
+        "name": "Facebook Developers",
+        "id": "UCP_lo1MFyx5IXDeD9s_6nUw"
+    },
+    {
+        "name": "Black Hat",
+        "id": "UCJ6q9Ie29ajGqKApbLqfBOg"
     }
 ]
