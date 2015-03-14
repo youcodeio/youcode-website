@@ -12,7 +12,7 @@ var youtube_channels = [
         "id": "UCGORzzCxacx2r_NsF6_DteQ"
     },
     {
-        "name": "dotconferences",
+        "name": "dot conferences",
         "id": "UCSRhwaM00ay0fasnsw6EXKA"
     },
     {
@@ -72,7 +72,7 @@ var youtube_channels = [
         "id": "UCO3LEtymiLrgvpb59cNsb8A"
     },
     {
-        "name": "vaadinofficial",
+        "name": "vaadin official",
         "id": "UCsGakFIbOsj-fgPFLf1QlQA"
     },
     {
@@ -92,7 +92,7 @@ var youtube_channels = [
         "id": "UCmRtPmgnQ04CMUpSUqPfhxQ"
     },
     {
-        "name": "TwitterUniversity",
+        "name": "Twitter University",
         "id": "UCeDh9omC_xMKrar2srQZiLg"
     },
     {
@@ -102,5 +102,9 @@ var youtube_channels = [
     {
         "name": "Black Hat",
         "id": "UCJ6q9Ie29ajGqKApbLqfBOg"
+    },
+    {
+        "name": "BreizhJUG",
+        "id": "UCVlyyvH7PK5NT6ZdCGS3zVQ"
     }
 ]
