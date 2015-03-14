@@ -55,11 +55,13 @@
                 <div class="col s2 m2 l4"> <p></p> </div>
             <div class="col s8 m8 l4">
                 <span class="flow-text trolo">
+                <form ng-submit="search()">
                    <div class="input-field">
                         <i class="mdi-action-search prefix"></i>
                         <input id="icon_prefix" type="text" class="validate" ng-model="query">
                         <label for="icon_prefix white">Search</label>
                     </div> 
+                  </form>
                 </span>     
             </div>
             <div class="col s2 m2 l4 trolo">
@@ -108,7 +110,7 @@
                   
                   <div class="col s4 offset-s8 grid-example">
                       <span class="flow-text">
-                          <a class="waves-effect waves-light btn red">Youtube</a>
+                          <a class="waves-effect waves-light btn red" ng-href="https://www.youtube.com/watch?v={{channel.id}}">Youtube</a>
                       </span>
                   </div>
                   
