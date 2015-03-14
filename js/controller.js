@@ -64,4 +64,9 @@ myApp.controller('Ctrl', function ($q,$scope,googleService) {
 		});
 		$scope.unicorn = false;
 	};
+
+	$scope.formatDate = function (date){
+		return 	moment(date.getTime(), "x").fromNow();
+	}
+
 });
