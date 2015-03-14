@@ -11,6 +11,7 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/index.css">
         
@@ -95,7 +96,7 @@
           
         <div class="col s12 grid-example"><span class="flow-text">
             <ul class="collapsible" data-collapsible="accordion" >
-                <li class="col s12" ng-repeat="channel in channels track by $index">
+                <li class="col s12 swag" ng-repeat="channel in channels track by $index">
                   <div class="collapsible-header"><i class="mdi-image-hdr-weak"></i>
                   
                   <div class="col s9 videoTitle">{{channel.title}}</div>
@@ -138,6 +139,7 @@
        <script type="text/javascript" src="js/jQuery.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-animate.js"></script>
         <script src="js/plugins.js"></script>
         <!-- adding Google's official script -->
         <script src="//apis.google.com/js/client.js?onload=googleApiClientReady"></script>

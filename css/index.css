@@ -35,3 +35,16 @@ img{
 .video_description{
     font-weight: 100;
 }
+
+.swag.ng-enter { 
+  -webkit-animation: fadeInUp 1.5s;
+  -moz-animation: fadeInUp 1.5s;
+  -o-animation: fadeInUp 1.5s;
+  -ms-animation: fadeInUp 1.5s;
+}
+.swag.ng-leave { 
+  -webkit-animation: fadeInUp 1.5s;
+  -moz-animation: fadeInUp 1.5s;
+  -o-animation: fadeInUp 1.5s;
+  -ms-animation: fadeInUp 1.5s;
+}

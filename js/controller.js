@@ -1,4 +1,4 @@
-var myApp = angular.module('youcodeio',[]);
+var myApp = angular.module('youcodeio',['ngAnimate']);
 
 myApp.service('googleService', ['$http', '$rootScope', '$q', function ($http, $rootScope, $q,$scope) {
 
