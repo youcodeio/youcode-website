@@ -5986,7 +5986,7 @@ a.waves-effect .waves-ripple {
 .collapsible-header {
   display: block;
   cursor: pointer;
-  overflow: auto;
+  overflow:hidden;
   padding: 0 1rem;
   background-color: #fff;
   border-bottom: 1px solid #ddd; }

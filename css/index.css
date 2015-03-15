@@ -3,9 +3,10 @@ img{
     height: 50px;
 }
 .toto{
+    overflow: auto;
     z-index: 0;
     position: absolute;
-    background-image: url(background/banniere_youcode_fusion.png);
+    background-image: url(background/banniere_youcode_fusion.svg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;

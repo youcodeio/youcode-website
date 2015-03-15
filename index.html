@@ -100,17 +100,17 @@
                 <li class="col s12 swag" ng-repeat="channel in channels track by $index">
                   <div class="collapsible-header"><i class="mdi-image-hdr-weak"></i>
                   
-                  <div class="col s9 videoTitle">{{channel.title}}</div>
-                  <div class="col s2"><small>{{formatDate(channel.publishedAt)}}</small></div>
+                  <div class="col s10 m8 l8 videoTitle">{{channel.title}}</div>
+                  <div class="col s12 m3 l3"><small>{{formatDate(channel.publishedAt)}}</small></div>
    
 
                   </div>
                   <div class="collapsible-body">
                   
                           
-                  <p class="col s12 video_description">{{channel.description}}</p>
+                  <p class="col s12 m12 l12 video_description">{{channel.description}}</p>
                   
-                  <div class="col s4 offset-s8 grid-example">
+                  <div class="col s4 m4 l4 offset-s6 offset-m7 offset-l8 grid-example">
                       <span class="flow-text">
                           <a class="waves-effect waves-light btn red" target="_blank" ng-href="https://www.youtube.com/watch?v={{channel.id}}">Youtube</a>
                       </span>
