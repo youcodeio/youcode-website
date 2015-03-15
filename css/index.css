@@ -3,13 +3,32 @@ img{
     height: 50px;
 }
 .toto{
-    background-image: url(background/banniere_youcode.png);
+    z-index: 0;
+    position: absolute;
+    background-image: url(background/banniere_youcode_fusion.svg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
     background-origin: border-box;
     width: 100%;
     height: 450px;
+}
+
+.flou{
+    position: absolute;
+    z-index: -1;
+    background-image: url(background/flou.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-origin: border-box;
+    width: 100%;
+    height: 450px;
+}
+
+.position{
+    position: relative;
+    top: 450px;
 }
 
 .trolo{
