@@ -88,22 +88,15 @@
             <div class="col s10 valign-wrapper">
               <h3 class="valign title">Result of YouCode search</h5>
             </div>
-              <div class="preloader-wrapper big active" ng-if="unicorn">
-                <div class="spinner-layer spinner-red-only">
-                  <div class="circle-clipper left">
-                    <div class="circle"></div>
-                  </div><div class="gap-patch">
-                    <div class="circle"></div>
-                  </div><div class="circle-clipper right">
-                    <div class="circle"></div>
-                  </div>
-                </div>
+             
+             <div class="progress" ng-if="unicorn">
+                  <div class="indeterminate"></div>
               </div>
           </div>
           
         <div class="row">
           
-        <div class="col s12 grid-example"><span class="flow-text">
+ <!--       <div class="col s12 grid-example"><span class="flow-text">
             <ul class="collapsible" data-collapsible="accordion" >
                 <li class="col s12 swag" ng-repeat="channel in channels track by $index">
                   <div class="collapsible-header"><i class="mdi-image-hdr-weak"></i>
@@ -111,7 +104,7 @@
                   <div class="col s10 m8 l8 videoTitle">{{channel.title}}</div>
                   <div class="col offset-s6 s4 offset-m6 m4 l3"><small>{{formatDate(channel.publishedAt)}}</small></div>
    <!-- {{formatDate(channel.publishedAt)}} -->
-
+<!--
                   </div>
                   <div class="collapsible-body">
                   
@@ -130,6 +123,25 @@
               </ul>      
         </span></div>
         </div>
+        -->
+        <div class="row">
+            <div class="card col s6 m4 l4" ng-repeat="channel in channels track by $index">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator card_css" src="img/jzfbf3.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">{{channel.title}}<i class="mdi-navigation-more-vert right"></i></span>
+              <p>{{formatDate(channel.publishedAt)}}</p>
+              <p><a class="waves-effect waves-light btn red" target="_blank" ng-href="https://www.youtube.com/watch?v={{channel.id}}">Youtube</a></p>
+              
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{channel.title}}<i class="mdi-navigation-close right"></i></span>
+              <p>{{channel.description}}</p>
+            </div>
+          </div>         
+        </div>
+        
       </div>
     
         
