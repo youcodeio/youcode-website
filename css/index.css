@@ -8,6 +8,20 @@ img{
     bottom: 30px;
 }
 
+.title_card_modif{
+white-space: nowrap;
+      width: 200px; /* à modifier selon vos besoins */
+  overflow: hidden;
+  -o-text-overflow: ellipsis; /* pour Opera 9 */
+  text-overflow: ellipsis; 
+}
+
+
+.icone{
+    font-size: 30px;
+    
+}
+
 .card_css{
     width: 100%;
     height: 100%;

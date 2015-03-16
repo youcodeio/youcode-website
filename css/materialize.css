@@ -5417,14 +5417,57 @@ small {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  background-clip: padding-box; }
+  background-clip: padding-box; 
+}
+
+
+
+
+
+
+  .card .icone {
+    color: black;
+    font-size: 30px;
+    font-weight: 300;
+      
+  }
+    .card .icone.activator {
+      cursor: pointer; }
+
+
+  
+    .card .card-image .icone {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 20px; }
+  
+    .card .card-content .icone {
+      line-height: 48px; }
+  
+    .card .card-reveal .icone {
+      cursor: pointer;
+      display: block; }
+
+
+
+
+
+
+
+
+
   .card .card-title {
-    color: #fff;
+    color: black;
     font-size: 24px;
-    font-weight: 300; }
+    font-weight: 300;
+      
+  }
     .card .card-title.activator {
       cursor: pointer; }
-  .card a {
+
+
+  .card a{
     color: white;
     margin-right: 20px;
     -webkit-transition: color 0.3s ease;
