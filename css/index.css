@@ -8,9 +8,11 @@ img{
     bottom: 30px;
 }
 
+
+
 .title_card_modif{
 white-space: nowrap;
-      width: 300px; /* à modifier selon vos besoins */
+      width: 100%; /* à modifier selon vos besoins */
   overflow: hidden;
   -o-text-overflow: ellipsis; /* pour Opera 9 */
   text-overflow: ellipsis; 
