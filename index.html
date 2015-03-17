@@ -78,7 +78,7 @@
           <div class="switch choix">
             <label>
               Talks
-              <input type="checkbox">
+              <input type="checkbox" ng-model="isTuts" ng-click="search()">
               <span class="lever"></span>
               Tutorials
             </label>
@@ -128,7 +128,7 @@
         <div class="row">
             <div class="card col s12 m6 l4" ng-repeat="channel in channels track by $index">
             <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator card_css" src="img/jzfbf3.jpg">
+              <img class="activator card_css" ng-src="{{channel.thumbnails.high.url}}">
             </div>
             <div class="card-content">
               <span class="card-title title_card_modif activator grey-text text-darken-4 col s10 m10 l10">{{channel.title}}</span><i class="mdi-navigation-more-vert right col s2 m2 l2 icone activator"></i>
@@ -196,6 +196,7 @@
         <script src="//apis.google.com/js/client.js?onload=googleApiClientReady"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.js"></script>
         <script src="js/swag.js"></script>
+        <script src="js/boobs.js"></script>
         <script src="js/controller.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
