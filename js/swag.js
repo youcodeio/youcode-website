@@ -1,4 +1,4 @@
-var youtube_channels = [
+var youtube_talks = [
     {
         "name": "Android Developers",
         "id": "UCVHFbqXqoYvEWM1Ddxl0QDg"
@@ -106,5 +106,9 @@ var youtube_channels = [
     {
         "name": "BreizhJUG",
         "id": "UCVlyyvH7PK5NT6ZdCGS3zVQ"
+    },
+    {
+        "name": "HTML5DevConf & IoTaconf",
+        "id": "UC__NR52nzDsbmy2y0S13JIQ"
     }
 ]

@@ -39,11 +39,10 @@ myApp.controller('Ctrl', function ($q,$scope,googleService) {
 		var savePromises = [];
 		$scope.unicorn = true;
 		
-		// If isTalk is false, then loads tutorials' channels
 		if ($scope.isTuts) {
 			var requests = youtube_tuts;
 		} else{
-			var requests = youtube_channels;
+			var requests = youtube_talks;
 		};
 
 		angular.forEach(requests, function(value,key) {
