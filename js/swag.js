@@ -36,10 +36,6 @@ var youtube_talks = [
         "id": "UCyU5wkjgQYGRB0hIHMwm2Sg"
     },
     {
-        "name": "mycodeschool",
-        "id": "UClEEsT7DkdVO_fkrBw0OTrA"
-    },
-    {
         "name": "ng-conf",
         "id": "UCm9iiIfgmVODUJxINecHQkA"
     },
