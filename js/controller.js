@@ -31,12 +31,21 @@ this.handleClientLoad = function (q,id) {
 }]);
 
 myApp.controller('Ctrl', function ($q,$scope,googleService) {
+
 	$scope.channels = [];
+	$scope.isTuts = false;
 
 	$scope.search = function (){
 		var savePromises = [];
 		$scope.unicorn = true;
-		angular.forEach(youtube_channels, function(value,key) {
+		
+		if ($scope.isTuts) {
+			var requests = youtube_tuts;
+		} else{
+			var requests = youtube_talks;
+		};
+
+		angular.forEach(requests, function(value,key) {
 			savePromises[key] = googleService.handleClientLoad($scope.query,value.id);
 
 		});

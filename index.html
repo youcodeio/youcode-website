@@ -61,7 +61,7 @@
                    <div class="input-field">
                         <i class="mdi-action-search prefix"></i>
                         <input id="icon_prefix" type="text" class="validate" ng-model="query">
-                        <label for="icon_prefix white">Search</label>
+                        <label for="icon_prefix">Search</label>
                     </div> 
                   </form>
                 </span>     
@@ -72,12 +72,13 @@
         </div>
         
         
-      <div class="container position">
+      <div class="container">
+      <div class="position"></div>
        <!-- Switch -->
           <div class="switch choix">
             <label>
               Talks
-              <input type="checkbox">
+              <input type="checkbox" ng-model="isTuts" ng-click="search()">
               <span class="lever"></span>
               Tutorials
             </label>
@@ -125,26 +126,59 @@
         </div>
         -->
         <div class="row">
-            <div class="card col s6 m4 l4" ng-repeat="channel in channels track by $index">
+            <div class="card col s12 m6 l4" ng-repeat="channel in channels track by $index">
             <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator card_css" src="img/jzfbf3.jpg">
+              <img class="activator card_css" ng-src="{{channel.thumbnails.high.url}}">
             </div>
             <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">{{channel.title}}<i class="mdi-navigation-more-vert right"></i></span>
-              <p>{{formatDate(channel.publishedAt)}}</p>
+              <span class="card-title title_card_modif activator grey-text text-darken-4 col s10 m10 l10">{{channel.channelTitle}}</span><i class="mdi-navigation-more-vert right col s2 m2 l2 icone activator"></i>
+              <p class="title_card_modif">{{channel.title}}</p>
+              <p><b>{{formatDate(channel.publishedAt)}}</b></p>
               <p><a class="waves-effect waves-light btn red" target="_blank" ng-href="https://www.youtube.com/watch?v={{channel.id}}">Youtube</a></p>
               
             </div>
             <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">{{channel.title}}<i class="mdi-navigation-close right"></i></span>
-              <p>{{channel.description}}</p>
+              <span class="card-title grey-text text-darken-4 col S10 m10 l10">
+              <p>{{channel.title}}</p></span> 
+              <i class="mdi-navigation-close right s2 m2 l2 card-title icone"></i>
+              <span>
+                  <p class="col s12 m12 l12">{{channel.description}}</p>
+              </span>
             </div>
-          </div>         
+          </div>      
+             
         </div>
         
       </div>
     
         
+            
+            <footer class="page-footer red">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Youcode website</h5>
+                <p class="grey-text text-lighten-4">You can use youcode to search Talks or Tutorials and learn it.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Google+</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright YouCode.io
+            
+            </div>
+          </div>
+        </footer>
+     
 
         
     </body>
@@ -166,6 +200,7 @@
         <script src="//apis.google.com/js/client.js?onload=googleApiClientReady"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.js"></script>
         <script src="js/swag.js"></script>
+        <script src="js/boobs.js"></script>
         <script src="js/controller.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
