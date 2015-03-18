@@ -7,3 +7,17 @@ img{
     text-align: center;
     font-weight: 100;
 }
+
+.title_card_modif{
+white-space: nowrap;
+      width: 100%; /* à modifier selon vos besoins */
+  overflow: hidden;
+  -o-text-overflow: ellipsis; /* pour Opera 9 */
+  text-overflow: ellipsis; 
+}
+
+
+.icone{
+    font-size: 30px;
+    
+}
