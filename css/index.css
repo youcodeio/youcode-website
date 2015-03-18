@@ -8,6 +8,10 @@ img{
     bottom: 30px;
 }
 
+.search{
+    color: white;
+}
+
 
 
 .title_card_modif{
@@ -27,6 +31,22 @@ white-space: nowrap;
 .card_css{
     width: 100%;
     height: 100%;
+}
+
+.explain{
+    width: 100%;
+    position: relative;
+    top: 350px;
+}
+
+.text_explain{
+    text-align: center;
+    color: rgba(0,0,0,0.4);
+    font-weight: 300;
+}
+
+.text_explain a{
+    color: #FF0603 ;
 }
 
 .toto{
@@ -52,7 +72,7 @@ white-space: nowrap;
     background-position: center;
     background-origin: border-box;
     width: 100%;
-    height: 450px;
+    height: 480px;
 }
 
 .position{
