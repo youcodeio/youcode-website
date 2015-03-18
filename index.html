@@ -61,16 +61,18 @@
                    <div class="input-field">
                         <i class="mdi-action-search prefix"></i>
                         <input id="icon_prefix" type="text" class="validate" ng-model="query">
-                        <label for="icon_prefix">Search</label>
+                        <label for="icon_prefix" class="search">Search</label>
                     </div> 
                   </form>
-                </span>     
+                </span>
+                        
             </div>
             <div class="col s2 m2 l4 trolo">
                      <a class="btn-floating btn-large waves-effect waves-light red" ng-click="search()"><i class="mdi-action-done"></i></a>   
-            </div>    
+            </div>  
+           
         </div>
-        
+        <div class="explain"><p class="text_explain"> Popular Search : <a href="">http2</a>, <a href="">AngularJs</a>, <a href="">Docker</a>, <a href="">html5</a> </p></div>
         
       <div class="container">
       <div class="position"></div>
@@ -95,36 +97,7 @@
               </div>
           </div>
           
-  <!--        <div class="row">
-          
-      <div class="col s12 grid-example"><span class="flow-text">
-            <ul class="collapsible" data-collapsible="accordion" >
-                <li class="col s12 swag" ng-repeat="channel in channels track by $index">
-                  <div class="collapsible-header"><i class="mdi-image-hdr-weak"></i>
-                  
-                  <div class="col s10 m8 l8 videoTitle">{{channel.title}}</div>
-                  <div class="col offset-s6 s4 offset-m6 m4 l3"><small>{{formatDate(channel.publishedAt)}}</small></div>
-   <!-- {{formatDate(channel.publishedAt)}} -->
-<!--
-                  </div>
-                  <div class="collapsible-body">
-                  
-                          
-                  <p class="col s12 m12 l12 video_description">{{channel.description}}</p>
-                  
-                  <div class="col s4 m4 l4 offset-s6 offset-m7 offset-l8 grid-example">
-                      <span class="flow-text">
-                          <a class="waves-effect waves-light btn red" target="_blank" ng-href="https://www.youtube.com/watch?v={{channel.id}}">Youtube</a>
-                      </span>
-                  </div>
-                  
-                  </div>
-                  
-                </li>
-              </ul>      
-        </span></div>
-        </div>
-        -->
+  
         <div class="row">
             <div class="card col s12 m6 l4" ng-repeat="channel in channels track by $index">
             <div class="card-image waves-effect waves-block waves-light">
