@@ -92,12 +92,15 @@ i{
     bottom: 100px;
 }
 
+.position_recherche{
+    position: relative;
+    bottom: 100px;
+}
 
 
 
-
-
-.toto{
+@media screen and (min-width: 1001px){
+  .toto{
   
     z-index: 0;
     position: absolute;
@@ -108,6 +111,40 @@ i{
     background-origin: border-box;
     width: 100%;
     height: 450px;
+}
+
+}
+
+@media screen and (min-width: 200px) and (max-width: 1000px) {
+  .toto{
+  
+    z-index: 0;
+    position: absolute;
+    background-image: url(background/banniere_youcode_tablette_fusion.svg);
+    background-repeat: no-repeat;
+    
+    background-position: center;
+    background-origin: border-box;
+    width: 100%;
+    height: 450px;
+}
+
+}
+
+@media screen and (max-width: 200px) {
+  .toto{
+  
+    z-index: 0;
+    position: absolute;
+    background-image: url(background/banniere_youcode_fusion.svg);
+    background-repeat: no-repeat;
+    
+    background-position: center;
+    background-origin: border-box;
+    width: 100%;
+    height: 450px;
+}
+
 }
 
 
