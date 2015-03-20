@@ -76,6 +76,11 @@ myApp.controller('Ctrl', function ($q,$scope,googleService) {
 
 	$scope.formatDate = function (date){
 		return 	moment(date.getTime(), "x").fromNow();
+	};
+
+	$scope.startSearch = function (name) {
+		$scope.query = name;
+		$scope.search();
 	}
 
 });
