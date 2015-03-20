@@ -49,6 +49,7 @@ white-space: nowrap;
     color: #FF0603 ;
 }
 
+
 /*  préparation de l'about dans la page home avec  
     les techno utiliser
 */
@@ -115,7 +116,11 @@ i{
 }
 
 .position{
-    height:  350px;
+    height:  450px;
+}
+
+.marge_container{
+    margin-bottom: 200px;
 }
 
 .trolo{

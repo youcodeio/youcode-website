@@ -74,35 +74,39 @@
         </div>
         <div class="explain"><p class="text_explain"> Popular Search : <a ng-click="startSearch('HTTP/2')" href="">HTTP/2</a>, <a ng-click="startSearch('AngularJS')" href="">AngularJS</a>, <a ng-click="startSearch('Docker')" href="">Docker</a>, <a ng-click="startSearch('HTML5')" href="">HTML5</a> </p></div>
         
-      <div class="container">
-      <div class="position"></div>
+      
+      
 <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 <!-- $$$$$$$$$$$$$$$$ Début la partie de présentation de YouCode.io $$$$$$$$$$$$$$$$$$$ -->
 <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-          <div ng-if="showAbout" class="cat about">
-                <div class="explanation">
-                    <p class="center-align text_explanation">Find talks or tutorials on Youtube easily</p>
-                </div>
-                <div class="row tecno_use">
-                    <div class="col s4">
-                        <!-- Promo Content 1 goes here -->
-                        <center><i class="mdi-image-flash-on large red-text"></i></center>
-                        <p class="center-align texte_about">Build by Developers </br>For Developers</p>
-                        <p class="center-align text_description">We are like you, developers. We love learning new frameworks by ourselves. Youtube offers hundred of talks and tuts, but it could be difficult to find. This is what YouCode is all about.</p>
+         <div ng-if="showAbout" class="cat container marge_container">
+             <div class="position"></div>
+              <div class=" about">
+                    <div class="explanation">
+                        <p class="center-align text_explanation">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
-                    <div class="col s4">
-                        <!-- Promo Content 2 goes here -->
-                        <center><i class="mdi-file-cloud-done large red-text"></i></center>
-                        <p class="center-align texte_about">Powered by</br>Google</p>
-                        <p class="center-align text_description">We are using all the latest technologies provided by Google to bring YouCode online. We're using Google App Engine to host the app, Youtube API to search through it and AngularJS for easy rendering.</p>
+                    <div class="row tecno_use">
+                        <div class="col s4">
+                            <!-- Promo Content 1 goes here -->
+                            <center><i class="mdi-image-flash-on large red-text"></i></center>
+                            <p class="center-align texte_about">Build by Developers </br>For Developers</p>
+                            <p class="center-align text_description">We are like you, developers. We love learning new frameworks by ourselves. Youtube offers hundred of talks and tuts, but it could be difficult to find. This is what YouCode is all about.</p>
+                        </div>
+                        <div class="col s4">
+                            <!-- Promo Content 2 goes here -->
+                            <center><i class="mdi-file-cloud-done large red-text"></i></center>
+                            <p class="center-align texte_about">Powered by</br>Google</p>
+                            <p class="center-align text_description">We are using all the latest technologies provided by Google to bring YouCode online. We're using Google App Engine to host the app, Youtube API to search through it and AngularJS for easy rendering.</p>
+                        </div>
+                        <div class="col s4">
+                            <!-- Promo Content 3 goes here -->
+                            <center><i class="mdi-social-group large red-text"></i></center>
+                            <p class="center-align texte_about">Open-source</br>Project</p>
+                            <p class="center-align text_description">We strongly believe that open-source code help everyone, that's why the whole project is hosted on <a href="https://github.com/youcodeio">Github</a>. Even the server-side code. You can fork it, and do whatever you want, especially learn !</p>
+                        </div>
+
                     </div>
-                    <div class="col s4">
-                        <!-- Promo Content 3 goes here -->
-                        <center><i class="mdi-social-group large red-text"></i></center>
-                        <p class="center-align texte_about">Open-source</br>Project</p>
-                        <p class="center-align text_description">We strongly believe that open-source code help everyone, that's why the whole project is hosted on <a href="https://github.com/youcodeio">Github</a>. Even the server-side code. You can fork it, and do whatever you want, especially learn !</p>
-                    </div>
-                </div>
+              </div>
           </div>
 <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 <!-- $$$$$$$$$$$$$$$$ Fin de la partie de présentation de YouCode.io $$$$$$$$$$$$$$$$$$ -->
@@ -112,7 +116,8 @@
 <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 <!-- $$$$$$$$$$$$$$$$ Début la partie de Recherche de YouCode.io $$$$$$$$$$$$$$$$$$$ -->
 <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --> 
-       <div ng-if="!showAbout" class="cat">
+            <div ng-if="!showAbout" class="cat container">
+             <div class="position"></div>
              <!-- Switch -->
               <div class="switch choix">
                 <label>
@@ -159,10 +164,11 @@
 
             </div>
         </div>
+     
 <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 <!-- $$$$$$$$$$$$$$$$ Fin de la partie de Recherche de YouCode.io $$$$$$$$$$$$$$$$$$$ -->
 <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-      </div>
+ 
     
         
             
