@@ -142,7 +142,7 @@
                   <h3 class="valign title">Result of YouCode search</h5>
                 </div>
                 <div ng-if="isNull">
-                  <p>Sorry, we can't find anything for the keyword {{last_query}} in <span ng-if="isTuts">tutorials</span><span ng-if="!isTuts">talks</span>. Do you want to search on <a ng-click="changeToggle()" href=""><strong ng-if="!isTuts">tutorials</strong><strong ng-if="isTuts">talks</strong></a> ?</p>
+                  <p><i class="mdi-alert-error red-text"></i> Sorry, we can't find anything for the keyword {{last_query}} in <span ng-if="isTuts">tutorials</span><span ng-if="!isTuts">talks</span>. Do you want to search on <a ng-click="changeToggle()" href=""><strong ng-if="!isTuts">tutorials</strong><strong ng-if="isTuts">talks</strong></a> ?</p>
                 </div>
                  <div class="progress col s12 m12 l12" ng-if="unicorn">
                       <div class="indeterminate"></div>

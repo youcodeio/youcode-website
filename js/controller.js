@@ -8,7 +8,13 @@ myApp.service('googleService', ['$http', '$rootScope', '$q', function ($http, $r
 
 // Upon loading, the Google APIs JS client automatically invokes this callback.
 this.handleClientLoad = function (q,id) {
-	gapi.client.setApiKey(APIKEY);
+	if (APIKEY == "KEY") {
+		toast("You forget to set the key moron!", 3000, 'rounded');
+		return;
+	}else{
+		gapi.client.setApiKey(APIKEY);
+	};
+	
 	return $q(function(resolve, reject) {
 		gapi.auth.init(function() {
 			gapi.client.load('youtube', 'v3', function() {
@@ -21,7 +27,11 @@ this.handleClientLoad = function (q,id) {
 					type: 'video'
 				});
 				request.execute(function(response) {
-					resolve(response);
+					if ('error' in response) {
+						 toast('Error '+response.error.code+": "+response.error.message, 3000, 'rounded');
+					} else{
+						resolve(response);
+					};
 				});
 			});
 		});
