@@ -36,7 +36,7 @@
               <a href="index.html" class="brand-logo">
                     <img src="img/youcode_logo.svg" alt="Logo YouCode" class="logo_youcode">
                 </a>
-              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+              <a href="#" data-activates="mobile-demo" class="button-collapse "><i class="mdi-navigation-menu white-text"></i></a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -49,16 +49,17 @@
               </ul>
             </div>
           </nav>
-          
-          <div class="row">
-              <div class="toto"></div>
-               <div class="flou"></div>
-                    
-                <div class="col m2 l4"> <p></p> </div>
+           <div class="toto"></div>
+            <div class="flou"></div>
+        <div class="container position_search">
+          <div class="row col s12 m12 l12">                    
+                <div class="col m2 l4"> 
+               <p></p>
+               </div>
             <div class="col s8 m8 l4">
-                <span class="flow-text trolo">
+                <span class="flow-text">
                 <form ng-submit="search()">
-                   <div class="input-field">
+                   <div class="input-field" >
                         <i class="mdi-action-search prefix"></i>
                         <input id="icon_prefix" type="text" class="validate" ng-model="query">
                         <label for="icon_prefix" class="search">Search</label>
@@ -67,15 +68,31 @@
                 </span>
                         
             </div>
-            <div class="col s2 m2 l4 trolo">
+            <div class="col s2 m2 l4">
                      <a class="btn-floating btn-large waves-effect waves-light red" ng-click="search()"><i class="mdi-action-done"></i></a>   
             </div>  
            
         </div>
-        <div class="explain"><p class="text_explain"> Popular Search : <a ng-click="startSearch('HTTP/2')" href="">HTTP/2</a>, <a ng-click="startSearch('AngularJS')" href="">AngularJS</a>, <a ng-click="startSearch('Docker')" href="">Docker</a>, <a ng-click="startSearch('HTML5')" href="">HTML5</a> </p></div>
+        <div class="row col s12 m12 l12">
+            <div class="explain">
+                <p class="text_explain"> Popular Search : <a ng-click="startSearch('HTTP/2')" href="">HTTP/2</a>, <a ng-click="startSearch('AngularJS')" href="">AngularJS</a>, <a ng-click="startSearch('Docker')" href="">Docker</a>, <a ng-click="startSearch('HTML5')" href="">HTML5</a> </p>
+            </div>
+        </div>
+        <div class="row col s12 m12 l12">
+         <!-- Switch -->
+                
+          <div class="switch choix center-align">
+            <label>
+              Talks
+              <input type="checkbox" ng-model="isTuts" ng-click="search()">
+              <span class="lever"></span>
+              Tutorials
+            </label>
+          </div>
         
-      
-      
+        </div>
+
+      </div>
 <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 <!-- $$$$$$$$$$$$$$$$ Début la partie de présentation de YouCode.io $$$$$$$$$$$$$$$$$$$ -->
 <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
@@ -118,15 +135,6 @@
 <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --> 
             <div ng-if="!showAbout" class="cat container">
              <div class="position"></div>
-             <!-- Switch -->
-              <div class="switch choix">
-                <label>
-                  Talks
-                  <input type="checkbox" ng-model="isTuts" ng-click="search()">
-                  <span class="lever"></span>
-                  Tutorials
-                </label>
-              </div>
           
             <!-- Page Content goes here -->
             <div class="row">
