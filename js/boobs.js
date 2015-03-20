@@ -42,5 +42,9 @@ var youtube_tuts = [
     {
         "name": "andrewperk",
         "id": "UCS7Rh2UstIN09_eCjsIJ1LA"
+    },
+    {
+        "name": "John Lindquist",
+        "id": "UCKW92i7iQFuNILqQOUOCrFw"
     }
 ]

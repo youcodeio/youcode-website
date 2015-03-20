@@ -32,10 +32,6 @@ var youtube_talks = [
         "id": "UCJS9pqu9BzkAMNTmzNMNhvg"
     },
     {
-        "name": "LevelUpTuts",
-        "id": "UCyU5wkjgQYGRB0hIHMwm2Sg"
-    },
-    {
         "name": "ng-conf",
         "id": "UCm9iiIfgmVODUJxINecHQkA"
     },
@@ -106,5 +102,9 @@ var youtube_talks = [
     {
         "name": "HTML5DevConf & IoTaconf",
         "id": "UC__NR52nzDsbmy2y0S13JIQ"
+    },
+    {
+        "name": "Codegram Technologies",
+        "id": "UCwoOpKfkyCQHW562hXXQAGg"
     }
 ]
