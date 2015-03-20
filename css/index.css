@@ -59,9 +59,6 @@ white-space: nowrap;
     margin-bottom: 100px;
 }
 
-.marge_container{
-    position: relative;
-}
 
 .explanation{
     width: 100%;
@@ -90,6 +87,11 @@ i{
     color: white;
 }
 
+.position_container{
+    position: relative;
+    bottom: 100px;
+}
+
 
 
 
@@ -110,7 +112,7 @@ i{
 
 
 .flou{
-    position: absolute;
+  
     z-index: -1;
     background-image: url(background/flou.png);
     background-repeat: no-repeat;
@@ -121,17 +123,13 @@ i{
     height: 540px;
 }
 
-.position{
-    height:  400px;
-}
 
-.marge_container{
-    margin-bottom: 200px;
-}
+
 
 .position_search{
     position: relative;
-    top: 370px;
+    bottom:180px;
+    z-index: 1;
 }
 
 .title{
