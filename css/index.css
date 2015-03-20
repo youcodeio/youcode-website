@@ -147,3 +147,10 @@ i{
   -o-animation: fadeInUp 1.5s;
   -ms-animation: fadeInUp 1.5s;
 }
+
+.cat.ng-enter {
+  -webkit-animation: fadeInUp 1s;
+  -moz-animation: fadeInUp 1s;
+  -o-animation: fadeInUp 1s;
+  -ms-animation: fadeInUp 1s;
+}

@@ -34,10 +34,18 @@ myApp.controller('Ctrl', function ($q,$scope,googleService) {
 
 	$scope.channels = [];
 	$scope.isTuts = false;
+	$scope.showAbout = true;
 
 	$scope.search = function (){
+
+		if ($scope.query == '') {
+			$scope.showAbout = true;
+			console.log($scope.showAbout);
+			return;
+		}
 		var savePromises = [];
 		$scope.unicorn = true;
+		$scope.showAbout =  false;
 		
 		if ($scope.isTuts) {
 			var requests = youtube_tuts;
