@@ -36,14 +36,16 @@ myApp.controller('Ctrl', function ($q,$scope,googleService) {
 	$scope.isTuts = false;
 	$scope.showAbout = true;
 	$scope.query = "";
+	$scope.last_query = "";
+	$scope.isNull = false;
 
 	$scope.search = function (){
 
 		if ($scope.query == '') {
 			$scope.showAbout = true;
-			console.log($scope.showAbout);
 			return;
 		}
+		$scope.isNull = false;
 		var savePromises = [];
 		$scope.unicorn = true;
 		$scope.showAbout =  false;
@@ -80,6 +82,12 @@ myApp.controller('Ctrl', function ($q,$scope,googleService) {
 			b = b.publishedAt;
 			return a>b ? -1 : a<b ? 1 : 0;
 		});
+
+		if ($scope.channels.length == 0) {
+			$scope.last_query = $scope.query;
+			$scope.isNull = true;
+		}
+
 		$scope.unicorn = false;
 	};
 
@@ -92,6 +100,10 @@ myApp.controller('Ctrl', function ($q,$scope,googleService) {
 		$( "#poney" ).addClass( "active" );
 		$( "#amazing_poney" ).addClass( "active" );
 		$scope.query = name;
+		$scope.search();
+	}
+	$scope.changeToggle = function () {
+		$scope.isTuts = !$scope.isTuts;
 		$scope.search();
 	}
 
