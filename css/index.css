@@ -49,6 +49,39 @@ white-space: nowrap;
     color: #FF0603 ;
 }
 
+/*  préparation de l'about dans la page home avec  
+    les techno utiliser
+*/
+.about{
+    width: 100%;
+    height: 500px;
+   
+    margin-bottom: 100px;
+}
+
+.explanation{
+
+}
+
+.tecnho_use{
+
+}
+
+.texte_about{
+    font-size: 2em;
+    font-weight: 100;
+}
+
+.text_description{
+    font-weight: 400;
+}
+
+i{
+    color: white;
+}
+
+
+
 .toto{
   
     z-index: 0;
@@ -76,12 +109,11 @@ white-space: nowrap;
 }
 
 .position{
-    height:  450px;
+    height:  400px;
 }
 
 .trolo{
     position: relative;
-    
     top: 370px;
 }
 
