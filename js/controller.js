@@ -88,6 +88,9 @@ myApp.controller('Ctrl', function ($q,$scope,googleService) {
 	};
 
 	$scope.startSearch = function (name) {
+
+		$( "#poney" ).addClass( "active" );
+		$( "#amazing_poney" ).addClass( "active" );
 		$scope.query = name;
 		$scope.search();
 	}
