@@ -35,6 +35,7 @@ myApp.controller('Ctrl', function ($q,$scope,googleService) {
 	$scope.channels = [];
 	$scope.isTuts = false;
 	$scope.showAbout = true;
+	$scope.query = "";
 
 	$scope.search = function (){
 
