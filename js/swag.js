@@ -106,5 +106,9 @@ var youtube_talks = [
     {
         "name": "Codegram Technologies",
         "id": "UCwoOpKfkyCQHW562hXXQAGg"
+    },
+    {
+        "name": "JSConf",
+        "id": "UCzoVCacndDCfGDf41P-z0iA"
     }
 ]
