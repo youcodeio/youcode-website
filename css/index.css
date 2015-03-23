@@ -12,14 +12,34 @@ img{
     color: white;
 }
 
+/*gestion de la taille du texte de description des cards*/
 
+.video_description{
+    font-size: 1em;
+}
+
+.channel_info{
+    font-size: 0.7em;
+    text-align: center;
+}
+
+.channel_info_date{
+    font-size: 0.7em;
+    font-weight: bold;
+    color: red;
+    text-align: right;
+}
+
+.taille_content{
+    height: 100px;
+}
 
 .title_card_modif{
-white-space: nowrap;
+
       width: 100%; /* à modifier selon vos besoins */
   overflow: hidden;
-  -o-text-overflow: ellipsis; /* pour Opera 9 */
-  text-overflow: ellipsis; 
+  
+    font-size: 0.8em;
 }
 
 

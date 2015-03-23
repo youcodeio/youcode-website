@@ -149,10 +149,31 @@
                   </div>
               </div>
 
+           
+           <div class="row ">
+        <div class="col s12 m6 l4 " ng-repeat="channel in channels track by $index">
+          <div class="card">
+            <div class="card-image">
+              <img class="card_css" ng-src="{{channel.thumbnails.high.url}}">
+<!--              <span class="card-title ">{{channel.channelTitle}}</span>-->
+            </div>
+            <div class="card-content taille_content">
+              <p class="title_card_modif">{{channel.title}}</p>
+            </div>
+            <div class="card-action">
+              <p class="col s6 m6 l6 channel_info">{{channel.channelTitle}}</p>
+              <p class="col s6 m6 l6 channel_info_date">{{formatDate(channel.publishedAt)}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+       </div>    
+           
+<!--     
             <div class="row">
                 <div class="card col s12 m6 l4" ng-repeat="channel in channels track by $index">
                     <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator card_css" ng-src="{{channel.thumbnails.high.url}}">
+                      <img class="activator" ng-src="{{channel.thumbnails.high.url}}">
                     </div>
                     <div class="card-content">
                       <span class="card-title title_card_modif activator grey-text text-darken-4 col s10 m10 l10">{{channel.channelTitle}}</span><i class="mdi-navigation-more-vert right col s2 m2 l2 icone activator"></i>
@@ -167,14 +188,14 @@
                       </span> 
                       <i class="mdi-navigation-close right s2 m2 l2 card-title icone"></i>
                       <span>
-                          <p class="col s12 m12 l12">{{channel.description}}</p>
+                          <p class="col s12 m12 l12 video_description">{{channel.description}}</p>
                       </span>
                     </div>
                 </div>      
 
             </div>
-        </div>
-     
+        
+           -->
 <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 <!-- $$$$$$$$$$$$$$$$ Fin de la partie de Recherche de YouCode.io $$$$$$$$$$$$$$$$$$$ -->
 <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
