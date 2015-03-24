@@ -10,7 +10,7 @@ var myApp = angular.module('youcodeio',['ngAnimate']);
 
 myApp.service('googleService', ['$http', '$rootScope', '$q', function ($http, $rootScope, $q,$scope) {
 
-	var APIKEY = "KEY";
+	var APIKEY = "AIzaSyAVEvskRW5I8Uti0fXxgT7Rpex7OBXpTyQ";
 
 	var deferred = $q.defer();
 
