@@ -48,6 +48,7 @@ myApp.controller('Ctrl', function ($q,$scope,googleService) {
 	$scope.query = "";
 	$scope.last_query = "";
 	$scope.isNull = false;
+    $scope.show = false;
 
 	$scope.search = function (){
 

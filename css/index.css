@@ -12,6 +12,48 @@ img{
     color: white;
 }
 
+.slide.ng-enter, .slide.ng-leave {
+	
+}
+
+/*hover sur les cards*/
+.cardhover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background-color: rgba(255,60,50,0.9);
+    
+}
+
+.cardhover.ng-enter {
+  -webkit-animation: fadeInDown 0.4s;
+  -moz-animation: fadeInDown 0.4s;
+  -o-animation: fadeInDown 0.4s;
+  -ms-animation: fadeInDown 0.4s;
+    
+}
+
+
+
+
+.titreVideo{
+    font-size: 1.1em;
+    font-weight: 200;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.descriptionVideo{
+    font-size: 0.8em;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
 /*gestion de la taille du texte de description des cards*/
 
 .video_description{
