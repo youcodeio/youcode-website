@@ -27,16 +27,12 @@ img{
 }
 
 .cardhover.ng-enter {
-  -webkit-animation: fadeInDown 0.4s;
-  -moz-animation: fadeInDown 0.4s;
-  -o-animation: fadeInDown 0.4s;
-  -ms-animation: fadeInDown 0.4s;
+  -webkit-animation: slideInDown 0.4s;
+  -moz-animation: slideInDown 0.4s;
+  -o-animation: slideInDown 0.4s;
+  -ms-animation: slideInDown 0.4s;
     
 }
-
-
-
-
 .titreVideo{
     font-size: 1.1em;
     font-weight: 200;
@@ -53,6 +49,11 @@ img{
     text-align: center;
 }
 
+.pos{
+    position: absolute;
+    bottom: -10px;
+    right: 0px;
+}
 
 /*gestion de la taille du texte de description des cards*/
 
@@ -70,6 +71,11 @@ img{
     font-weight: bold;
     color: red;
     text-align: right;
+  white-space:nowrap;
+    width: 10px; /* à modifier selon vos besoins */
+    overflow: hidden;
+    -o-text-overflow: ellipsis; /* pour Opera 9 */
+    text-overflow: ellipsis; /* pour le reste du monde */
 }
 
 .taille_content{
@@ -79,7 +85,7 @@ img{
 .title_card_modif{
 
       width: 100%; /* à modifier selon vos besoins */
-  overflow: hidden;
+      overflow: hidden;
   
     font-size: 0.8em;
 }

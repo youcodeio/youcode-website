@@ -154,12 +154,12 @@
                      
                       <div class="card" ng-mouseenter="show = true" ng-mouseleave="show = false">
                         <div class="cardhover" ng-if="show">
+                        
                             <p class="titreVideo white-text">{{channel.title}}</p>
                             <p class="descriptionVideo white-text">{{channel.description}}</p>
-                            <center>
-                                <a class="waves-effect waves-light btn white red-text right" href="https://www.youtube.com/watch?v={{channel.id}}" target="_blank"><i class="mdi-hardware-keyboard-control right red-text"></i>Youtube</a>
-                         
-                            </center>
+                            <div class="row pos">
+                                <a class="waves-effect waves-light btn white red-text btn_Youtube right" href="https://www.youtube.com/watch?v={{channel.id}}" target="_blank"><i class="mdi-hardware-keyboard-control right red-text"></i>Youtube</a>
+                         </div>
                         </div>
                         <div class="card-image">
                           <img class="card_css" ng-src="{{channel.thumbnails.high.url}}">

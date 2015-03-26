@@ -5612,8 +5612,7 @@ small {
   -webkit-justify-content: space-between;
   justify-content: space-between; }
   .toast .btn, .toast .btn-large, .toast .btn-flat {
-    margin: 0;
-    margin-left: 3rem; }
+    }
   .toast.rounded {
     border-radius: 24px; }
   @media only screen and (max-width : 600px) {
