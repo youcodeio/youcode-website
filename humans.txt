@@ -3,7 +3,9 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+#    <name> -- <role> -- <twitter>
+	Pierre Zemb -- Developer -- @PierreZ
+
 
 # THANKS
 
@@ -11,5 +13,5 @@
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5
+    CSS3, HTML5, JavaScript
     Apache Server Configs, jQuery, Modernizr, Normalize.css
