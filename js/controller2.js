@@ -10,13 +10,12 @@ var myApp = angular.module('youcodeio',['ngAnimate']);
 
 myApp.service('googleService', ['$http', '$rootScope', '$q', function ($http, $rootScope, $q,$scope) {
 
-	var APIKEY = "KEY";
-
 	var deferred = $q.defer();
 
 // Upon loading, the Google APIs JS client automatically invokes this callback.
 this.handleClientLoad = function (q,id,name) {
-	gapi.client.setApiKey(APIKEY);
+	
+	gapi.client.setApiKey(window.APIKEY);
 	return $q(function(resolve, reject) {
 		gapi.auth.init(function() {
 			gapi.client.load('youtube', 'v3', function() {

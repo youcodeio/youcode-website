@@ -1,0 +1,2 @@
+var APIKEY;
+APIKEY = "KEY";
