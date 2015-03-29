@@ -49,7 +49,14 @@ myApp.controller('Ctrl', function ($q, $scope, googleService) {
 		var savePromises = [];
 		$scope.unicorn = true;
 		requests = youtube_talks;
-		requests.push(youtube_tuts);
+		requests = requests.concat(youtube_tuts);
+
+		requests.sort(function(a, b){
+			if(a.name < b.name) return -1;
+			if(a.name > b.name) return 1;
+			return 0;
+		})
+
 		angular.forEach(requests, function(value,key) {
 			savePromises[key] = googleService.handleClientLoad($scope.query,value.id,value.name);
 		});
@@ -63,16 +70,15 @@ myApp.controller('Ctrl', function ($q, $scope, googleService) {
 
 		var videos = [];
 
+		console.log(data);
+
 		angular.forEach(data, function(value,key) {
 			$scope.channels[key] = {
-					channel_name:"",
+					channel_name:value.channel_name,
 					channel_video: []
 				};
 			angular.forEach(value.items, function(result,key2){
-			$scope.channels[key].channel_name = result.snippet.channelTitle;
 			$scope.channels[key].channel_video.push(result.snippet);
-				
-				//$scope.channels.push(result.snippet);
 			});
 		});
 		$scope.unicorn = false;
