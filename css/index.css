@@ -12,8 +12,10 @@ img{
     color: white;
 }
 
-.slide.ng-enter, .slide.ng-leave {
-	
+/*Toast pour informer que nous sommes encore en dev et en Beta*/
+.toast_beta{
+    font-weight: bold;
+    padding-left: 5px;
 }
 
 /*hover sur les cards*/
