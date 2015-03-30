@@ -1,5 +1,7 @@
 var myApp = angular.module('youcodeio',['ngAnimate']);
 
+toast('This is currently a beta version, please tell us what you think on <a href="https://twitter.com/you_codeio"> Twitter</a>', 7000, 'rounded'); // 'rounded' is the class I'm applying to the toast
+
 myApp.service('googleService', ['$http', '$rootScope', '$q', function ($http, $rootScope, $q,$scope) {
 
 	var deferred = $q.defer();

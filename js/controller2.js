@@ -1,3 +1,5 @@
+toast('This is currently a beta version, please tell us what you think on <a href="https://twitter.com/you_codeio"> Twitter</a>', 7000, 'rounded'); // 'rounded' is the class I'm applying to the toast
+
 // Upon loading, the Google APIs JS client automatically invokes this callback.
 googleApiClientReady = function() {
     var scope = angular.element(document.getElementsByTagName("body")).scope();
