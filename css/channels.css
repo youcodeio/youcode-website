@@ -3,6 +3,14 @@ img{
     height: 70px;
 }
 
+
+/*Toast pour informer que nous sommes encore en dev et en Beta*/
+.toast_beta{
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+
 .youcode_channels{
     text-align: center;
     font-weight: 100;
