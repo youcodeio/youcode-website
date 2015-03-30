@@ -14,20 +14,27 @@ myApp.service('googleService', ['$http', '$rootScope', '$q', function ($http, $r
 
 // Upon loading, the Google APIs JS client automatically invokes this callback.
 this.handleClientLoad = function (q,id,name) {
-	
 	gapi.client.setApiKey(window.APIKEY);
 	return $q(function(resolve, reject) {
 		gapi.auth.init(function() {
+			var request = "";
 			gapi.client.load('youtube', 'v3', function() {
-
-				request = gapi.client.youtube.search.list({
-					q: q,
-					part: 'id,snippet',
-					channelId: id,
-					order: 'date',
-					type: 'video', 
-					maxResults: '2'
-				});
+				if(q == 1){
+					request = gapi.client.youtube.channels.list({
+						part: "brandingSettings,snippet",
+						id: id
+					});
+				}
+				else if(q == 2){
+					request = gapi.client.youtube.search.list({
+						q: q,
+						part: 'id,snippet',
+						channelId: id,
+						order: 'date',
+						type: 'video', 
+						maxResults: '2'
+					});
+				}
 				request.execute(function(response) {
 					response.channel_name = name;
 					resolve(response);
@@ -45,6 +52,7 @@ myApp.controller('Ctrl', function ($q, $scope, googleService) {
 
 	$scope.initiate = function(){
 
+		var banners = [];
 		var savePromises = [];
 		$scope.unicorn = true;
 		requests = youtube_talks;
@@ -56,24 +64,29 @@ myApp.controller('Ctrl', function ($q, $scope, googleService) {
 			return 0;
 		})
 
-		angular.forEach(requests, function(value,key) {
-			savePromises[key] = googleService.handleClientLoad($scope.query,value.id,value.name);
+		angular.forEach(requests, function(value, key){
+			banners[key] = googleService.handleClientLoad(1, value.id, value.name)
 		});
-		$q.all(savePromises).then(function(data){
-			$scope.parsingResults(data);
+		$q.all(banners).then(function(d){
+			angular.forEach(requests, function(value,key) {
+				savePromises[key] = googleService.handleClientLoad(2,value.id,value.name);
+			});
+			$q.all(savePromises).then(function(data){
+				$scope.parsingResults(data, d);
+			});
 		});
 	}
 
-	$scope.parsingResults = function (data){
+	$scope.parsingResults = function (data, d){
 		$scope.channels = [];
 
 		var videos = [];
 
-		console.log(data);
-
 		angular.forEach(data, function(value,key) {
 			$scope.channels[key] = {
-					channel_name:value.channel_name,
+					channel_name:d[key].items[0].snippet.title,
+					channel_logo: d[key].items[0].snippet.thumbnails.high,
+					channel_banner: d[key].items[0].brandingSettings.image.bannerImageUrl,
 					channel_video: []
 				};
 			angular.forEach(value.items, function(result,key2){
