@@ -97,6 +97,7 @@ myApp.controller('Ctrl', function ($q, $scope, googleService) {
 			});
 		});
 		$scope.unicorn = false;
+        console.log($scope.channels);
 	};
 });
 

@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/channels.css">
+        <link rel="stylesheet" href="css/index.css">
         
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
@@ -50,8 +50,8 @@
             </div>
           </nav>
   
-    <div class="container">
-          <!-- Page Content goes here -->
+        <div class="container">
+              <!-- Page Content goes here -->
             <div class="row">
               <div class="col s10 m10 l10 valign-wrapper">
                 <h3 class="valign youcode_channels">YouCode channels</h5>
@@ -59,70 +59,22 @@
               <div class="progress col S12 m12 l12" ng-if="unicorn">
                   <div class="indeterminate"></div>
               </div>
-          </div>
-    
-      
-     <div class="row">
-          
-        <div class="col s12 grid-example"><span class="flow-text">
-            <ul class="collapsible" data-collapsible="accordion" >
-                <li class="col s12" ng-repeat="channel in channels track by $index">
-                  <div class="collapsible-header"><i class="mdi-hardware-tv"></i>
-                  <div class="col s8 videoTitle">{{channel.channel_name}}</div>
-                  </div>
-                  
-                  <div class="collapsible-body">
-                    
-                    
-                    
-                    <!--card 1-->
-                     <div class="card col s12 m6 offset-l2 l4">
-                        <div class="card-image waves-effect waves-block waves-light">
-                          <img class="activator card_css" ng-src="{{channel.channel_video[0].thumbnails.high.url}}">
-                        </div>
-                        <div class="card-content">
-                          <span class="card-title title_card_modif activator grey-text text-darken-4 col s10 m10 l10"></span><i class="mdi-navigation-more-vert right col s2 m2 l2 icone activator"></i>
-                          <p class="title_card_modif col s12 m12 l12">{{channel.channel_video[0].title}}</p>
-                          <p class="col s12 m12 l12 title_card_modif"><b>{{formatDate(channel.publishedAt)}}</b></p>
-                          <p><a class="waves-effect waves-light btn red" target="_blank" ng-href="https://www.youtube.com/watch?v={{channel.id}}">Youtube</a></p>
-
-                        </div>
-                        <div class="card-reveal">
-                          <span class="card-title grey-text text-darken-4 col S10 m10 l10">
-                          <p>{{channel.channel_video[1].title}}</p></span> 
-                          <i class="mdi-navigation-close right s2 m2 l2 card-title icone"></i>
-                          <span>
-                              <p class="col s12 m12 l12">{{channel.description}}</p>
-                          </span>
-                        </div>
-                      </div>   
-                      
-                    <!--card 2-->
-                    <div class="card col s12 m6 l4">
-                        <div class="card-image waves-effect waves-block waves-light">
-                          <img class="activator card_css" ng-src="{{channel.channel_video[1].thumbnails.high.url}}">
-                        </div>
-                        <div class="card-content">
-                          <span class="card-title title_card_modif activator grey-text text-darken-4 col s10 m10 l10"></span><i class="mdi-navigation-more-vert right col s2 m2 l2 icone activator"></i>
-                          <p class="title_card_modif col s12 m12 l12">{{channel.channel_video[1].title}}/p>
-                          <p class="col s12 m12 l12 title_card_modif"><b>{{formatDate(channel.publishedAt)}}</b></p>
-                          <p><a class="waves-effect waves-light btn red" target="_blank" ng-href="https://www.youtube.com/watch?v={{channel.id}}">Youtube</a></p>
-
-                        </div>
-                        <div class="card-reveal">
-                          <span class="card-title grey-text text-darken-4 col S10 m10 l10">
-                          <p>{{channel.title}}</p></span> 
-                          <i class="mdi-navigation-close right s2 m2 l2 card-title icone"></i>
-                          <span>
-                              <p class="col s12 m12 l12">{{channel.description}}</p>
-                          </span>
-                        </div>
-                      </div>   
-                  </div>
-                </li>
-              </ul>      
             </div>
-        </div>
+             <div class="row">
+                <div class="col s12 grid-example">
+                    <ul class="collapsible" data-collapsible="accordion" >
+                        <li class="col s12" ng-repeat="channel in channels track by $index">
+                          <div class="collapsible-header"><i class="mdi-hardware-tv"></i>
+                          <div class="col s8 videoTitle">{{channel.channel_name}}</div>
+                          </div>
+                          <div class="collapsible-body">
+                            <p>cool</p>
+                          </div> 
+
+                        </li>
+                    </ul>      
+                </div>
+            </div>
 
         </div>    
     </body>
