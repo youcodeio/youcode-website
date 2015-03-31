@@ -4,7 +4,7 @@ angular.module('youcodeio.controllers.channels', [])
 	$scope.channels = [];
 	$scope.query = "";
 
-	$scope.initiate = function(){
+		console.log("initiate");
 
 		var banners = [];
 		var savePromises = [];
@@ -29,7 +29,7 @@ angular.module('youcodeio.controllers.channels', [])
 				$scope.parsingResults(data, d);
 			});
 		});
-	}
+	
 
 	$scope.parsingResults = function (data, d){
 		$scope.channels = [];
