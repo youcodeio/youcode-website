@@ -1,4 +1,4 @@
-angular.module('youcodeio.controllers.welcome', []).controller('WelcomeCtrl', function ($q,$scope,googleService) {
+angular.module('youcodeio.controllers.welcome', []).controller('WelcomeCtrl', function ($q,$scope,googleService,$state) {
 
 	$scope.channels = [];
 	$scope.isTuts = false;
@@ -6,7 +6,7 @@ angular.module('youcodeio.controllers.welcome', []).controller('WelcomeCtrl', fu
 	$scope.query = "";
 	$scope.last_query = "";
 	$scope.isNull = false;
-    $scope.show = false;
+    	$scope.show = false;
 
 	$scope.search = function (){
 
@@ -75,5 +75,9 @@ angular.module('youcodeio.controllers.welcome', []).controller('WelcomeCtrl', fu
 		$scope.isTuts = !$scope.isTuts;
 		$scope.search();
 	}
+
+	if(typeof($state.params.query)!='undefined'){
+    		$scope.startSearch(decodeURI($state.params.query));
+    	}
 
 });

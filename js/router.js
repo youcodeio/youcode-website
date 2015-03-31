@@ -9,7 +9,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         
         // HOME STATES AND NESTED VIEWS ========================================
         .state('welcome', {
-            url: '/',
+            url: '/?query',
             templateUrl: 'partials/welcome.html',
             controller: 'WelcomeCtrl'
         })
@@ -29,6 +29,5 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 // Upon loading, the Google APIs JS client automatically invokes this callback and 
 // start AngularJS
 googleApiClientReady = function() {
-    console.log("ready");
     angular.bootstrap(document.body, ['youcodeio']);
 }
