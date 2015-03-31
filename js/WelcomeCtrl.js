@@ -1,46 +1,4 @@
-var myApp = angular.module('youcodeio',['ngAnimate']);
-
-toast('This is currently a beta version, please tell us what you think on  <a href="https://twitter.com/you_codeio" class="toast_beta" target="_blank"> Twitter</a>', 7000, 'rounded'); // 'rounded' is the class I'm applying to the toast
-
-myApp.service('googleService', ['$http', '$rootScope', '$q', function ($http, $rootScope, $q,$scope) {
-
-	var deferred = $q.defer();
-
-// Upon loading, the Google APIs JS client automatically invokes this callback.
-this.handleClientLoad = function (q,id) {
-	if (window.APIKEY == "KEY") {
-		toast("You forget to set the key moron!", 3000, 'rounded');
-		return;
-	}else{
-		gapi.client.setApiKey(window.APIKEY);
-	};
-	
-	return $q(function(resolve, reject) {
-		gapi.auth.init(function() {
-			gapi.client.load('youtube', 'v3', function() {
-
-				request = gapi.client.youtube.search.list({
-					q: q,
-					part: 'id,snippet',
-					channelId: id,
-					order: 'date',
-					type: 'video'
-				});
-				request.execute(function(response) {
-					if ('error' in response) {
-						 toast('Error '+response.error.code+": "+response.error.message, 3000, 'rounded');
-					} else{
-						resolve(response);
-					};
-				});
-			});
-		});
-	});
-};
-
-}]);
-
-myApp.controller('Ctrl', function ($q,$scope,googleService) {
+angular.module('youcodeio.controllers.welcome', []).controller('WelcomeCtrl', function ($q,$scope,googleService) {
 
 	$scope.channels = [];
 	$scope.isTuts = false;
@@ -68,7 +26,7 @@ myApp.controller('Ctrl', function ($q,$scope,googleService) {
 		};
 
 		angular.forEach(requests, function(value,key) {
-			savePromises[key] = googleService.handleClientLoad($scope.query,value.id);
+			savePromises[key] = googleService.searchVideo($scope.query,value.id);
 
 		});
 		$q.all(savePromises).then(function(data){

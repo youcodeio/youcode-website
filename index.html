@@ -1,265 +1,130 @@
 <!doctype html>
 <html class="no-js" lang="" ng-app='youcodeio'>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>YouCode: A plateform for developers to find talks and tutorials</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>YouCode: A plateform for developers to find talks and tutorials</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/index.css">
-        
-        <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/index.css">
 
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-        
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body ng-controller='Ctrl'>
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="js/jQuery.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-animate.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <!-- Load keys -->
+  <script src="js/dontlook.js"></script>
+  <!-- Loading arrays of data -->
+  <script src="js/swag.js"></script>
+  <script src="js/boobs.js"></script>
+  <script src="js/milf.js"></script>
+
+  <script type="text/javascript" src="js/YoutubeService.js"></script>
+    <!-- Main controller for routing-->
+  <script src="js/router.js"></script>
+
+  <script type="text/javascript" src="js/ChannelsCtrl.js"></script>
+    <!-- Loading different controllers -->
+  <script type="text/javascript" src="js/WelcomeCtrl.js"></script>
+  <!-- load Google's official script -->
+  <script src="//apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+
+
+
+</head>
+<body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <!-- Add your site or application content here -->
-        
-        <!-- Navigation bar -->
-          <nav>
-            <div class="nav-wrapper red">
-              <a href="index.html" class="brand-logo">
-                    <img src="img/youcode_logo.svg" alt="Logo YouCode" class="logo_youcode">
+            <![endif]-->
+
+            <!-- Add your site or application content here -->
+
+            <!-- Navigation bar -->
+            <nav>
+              <div class="nav-wrapper red">
+                <a href="#/" class="brand-logo">
+                  <img src="img/youcode_logo.svg" alt="Logo YouCode" class="logo_youcode">
                 </a>
-              <a href="#" data-activates="mobile-demo" class="button-collapse "><i class="mdi-navigation-menu white-text"></i></a>
-              <ul class="right hide-on-med-and-down">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="channels.html">Channels</a></li>
-              </ul>
-              <ul class="side-nav" id="mobile-demo">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="channels.html">Channels</a></li>
-              </ul>
-            </div>
-          </nav>
-           <div class="toto"></div>
-            <div class="flou"></div>
-        <div class="container position_search">
-          <div class="row col s12 m12 l12">                    
-                <div class="col m2 l4"> 
-               <p></p>
-               </div>
-            <div class="col s8 m8 l4">
-                <span class="flow-text">
-                <form ng-submit="search()">
-
-                   <div class="input-field">
-                        <i id="poney" class="mdi-action-search prefix"></i>
-                        <input id="icon_prefix" type="text" class="validate" ng-model="query">
-                        <label id="amazing_poney" for="icon_prefix" class="search">Search</label>
-                    </div> 
-                  </form>
-                </span>
-                        
-            </div>
-            <div class="col s2 m2 l4">
-                     <a class="btn-floating btn-large waves-effect waves-light red" ng-click="search()"><i class="mdi-action-done"></i></a>   
-            </div>  
-           
-        </div>
-        <div class="row col s12 m12 l12">
-            <div class="explain">
-                <p class="text_explain"> Popular Search : <a ng-click="startSearch('HTTP/2')" href="">HTTP/2</a>, <a ng-click="startSearch('AngularJS')" href="">AngularJS</a>, <a ng-click="startSearch('Docker')" href="">Docker</a>, <a ng-click="startSearch('HTML5')" href="">HTML5</a> </p>
-            </div>
-        </div>
-        <div class="row col s12 m12 l12">
-         <!-- Switch -->
-                
-          <div class="switch choix center-align">
-            <label>
-              Talks
-              <input type="checkbox" ng-model="isTuts" ng-click="search()">
-              <span class="lever"></span>
-              Tutorials
-            </label>
-          </div>
-        
-        </div>
-
-      </div>
-<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-<!-- $$$$$$$$$$$$$$$$ Début la partie de présentation de YouCode.io $$$$$$$$$$$$$$$$$$$ -->
-<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-         <div ng-if="showAbout" class="row cat container position_container">
-              <div class="about">
-                    <div class="explanation">
-                        <p class="center-align text_explanation">Find talks or tutorials on Youtube easily</p>
-                    </div>
-                    <div class="row tecno_use">
-                        <div class="col s12 m4 l4">
-                            <!-- Promo Content 1 goes here -->
-                            <center><i class="mdi-image-flash-on large red-text"></i></center>
-                            <p class="center-align texte_about">Build by developers,</br>for developers</p>
-                            <p class="center-align text_description">We are like you, developers. We love learning new frameworks by ourselves. Youtube offers hundred of talks and tuts, but it could be difficult to find. This is what YouCode is all about.</p>
-                        </div>
-                        <div class="col s12 m4 l4">
-                            <!-- Promo Content 2 goes here -->
-                            <center><i class="mdi-file-cloud-done large red-text"></i></center>
-                            <p class="center-align texte_about">Powered by</br>Google</p>
-                            <p class="center-align text_description">We are using all the latest technologies provided by Google to bring YouCode online. We're using Google App Engine to host the app written in Golang, Youtube API to search through it and AngularJS for easy rendering.</p>
-                        </div>
-                        <div class="col s12 m4 l4">
-                            <!-- Promo Content 3 goes here -->
-                            <center><i class="mdi-social-group large red-text"></i></center>
-                            <p class="center-align texte_about">Open-source</br>Project</p>
-                            <p class="center-align text_description">We strongly believe that open-source code help everyone, that's why the whole project is hosted on <a href="https://github.com/youcodeio" target="_blank">Github</a>. Even the server-side code. You can fork it, and do whatever you want, especially learn !</p>
-                        </div>
-
-                    </div>
-                        <div class="col s12 m4 l4">
-                            <!-- Promo Content 1 goes here -->
-                            <center><i class="mdi-action-stars large red-text"></i></center>
-                            <p class="center-align texte_about">Learn from</br>the best</p>
-                            <p class="center-align text_description">There are many organizers who put their talks on Youtube. Speakers know their subject, and their goal is to teach you things. What are you waiting for?</p>
-                        </div>
-                        <div class="col s12 m4 l4">
-                            <!-- Promo Content 2 goes here -->
-                            <center><i class="mdi-image-switch-video large red-text"></i></center>
-                            <p class="center-align texte_about">See developers</br>in action</p>
-                            <p class="center-align text_description">Talks are great. But sometimes, you need to have a more didactical point of view. By going through a tutorial, you'll start faster.</p>
-                        </div>
-                        <div class="col s12 m4 l4">
-                            <!-- Promo Content 3 goes here -->
-                            <center><i class="mdi-social-group large red-text"></i></center>
-                            <p class="center-align texte_about">Our data is<br> your data</p>
-                            <p class="center-align text_description">The same way we believe in open source software, we put our effort into building an OpenData plateform. Have a look on your stat, and <a href="https://twitter.com/you_codeio" target="_blank">ask us</a> if you want an access.</p>
-                        </div>
-
-                    </div>
-              </div>
-          </div>
-<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-<!-- $$$$$$$$$$$$$$$$ Fin de la partie de présentation de YouCode.io $$$$$$$$$$$$$$$$$$ -->
-<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-
-      
-<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-<!-- $$$$$$$$$$$$$$$$ Début la partie de Recherche de YouCode.io $$$$$$$$$$$$$$$$$$$ -->
-<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --> 
-        <div ng-if="!showAbout" class="cat container position_recherche">
-                 <div class="position"></div>
-          
-                <!-- Page Content goes here -->
-                <div class="row">
-                    <div class="col s12 m12 l12">
-                      <h3 class="valign title">Result of YouCode search</h5>
-                    </div>
-                    <div ng-if="isNull">
-                      <p><i class="mdi-alert-error red-text"></i> Sorry, we can't find anything for the keyword {{last_query}} in <span ng-if="isTuts">tutorials</span><span ng-if="!isTuts">talks</span>. Do you want to search on <a ng-click="changeToggle()" href=""><strong ng-if="!isTuts">tutorials</strong><strong ng-if="isTuts">talks</strong></a> ?</p>
-                    </div>
-                    <div class="progress col s12 m12 l12" ng-if="unicorn">
-                          <div class="indeterminate"></div>
-                    </div>
-                </div>
-                <div class="row ">
-                    
-                    <div class="col s12 m6 l4 " ng-repeat="channel in channels track by $index">    
-                     
-                      <div class="card" ng-mouseenter="show = true" ng-mouseleave="show = false">
-                        <div class="cardhover" ng-if="show">
-                        
-                            <p class="titreVideo white-text">{{channel.title}}</p>
-                            <p class="descriptionVideo white-text">{{channel.description}}</p>
-                            <div class="row pos">
-                                <a class="waves-effect waves-light btn white red-text btn_Youtube right" href="https://www.youtube.com/watch?v={{channel.id}}" target="_blank"><i class="mdi-hardware-keyboard-control right red-text"></i>Youtube</a>
-                         </div>
-                        </div>
-                        <div class="card-image">
-                          <img class="card_css" ng-src="{{channel.thumbnails.high.url}}">
-            <!--              <span class="card-title ">{{channel.channelTitle}}</span>-->
-                        </div>
-                        <div class="card-content taille_content">
-                          <p class="title_card_modif">{{channel.title}}</p>
-                        </div>
-                        <div class="card-action">
-                          <p class="col s6 m6 l6 channel_info">{{channel.channelTitle}}</p>
-                          <p class="col s6 m6 l6 channel_info_date">{{formatDate(channel.publishedAt)}}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-           </div>    
-<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-<!-- $$$$$$$$$$$$$$$$ Fin de la partie de Recherche de YouCode.io $$$$$$$$$$$$$$$$$$$ -->
-<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
- 
-    
-        
-            
-        <footer class="page-footer red">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Youcode website</h5>
-                <p class="grey-text text-lighten-4">You can use youcode to search Talks or Tutorials and learn it.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="https://twitter.com/you_codeio" target="_blank">Twitter</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Google+</a></li>
+                <a href="#" data-activates="mobile-demo" class="button-collapse "><i class="mdi-navigation-menu white-text"></i></a>
+                <ul class="right hide-on-med-and-down">
+                  <li><a href="#/">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#/channels">Channels</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                  <li><a href="#/">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#/channels">Channels</a></li>
                 </ul>
               </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2015 Copyright YouCode.io
+            </nav>
+
+            <div ui-view></div>
+
+
+
             
-            </div>
-          </div>
-        </footer>
-     
+            <footer class="page-footer red">
+              <div class="container">
+                <div class="row">
+                  <div class="col l6 s12">
+                    <h5 class="white-text">Youcode website</h5>
+                    <p class="grey-text text-lighten-4">You can use youcode to search Talks or Tutorials and learn it.</p>
+                  </div>
+                  <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                      <li><a class="grey-text text-lighten-3" href="https://twitter.com/you_codeio" target="_blank">Twitter</a></li>
+                      <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+                      <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
+                      <li><a class="grey-text text-lighten-3" href="#!">Google+</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-copyright">
+                <div class="container">
+                  © 2015 Copyright YouCode.io
 
-        
-    </body>
-    
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+                </div>
+              </div>
+            </footer>
 
-      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
-      <script type="text/javascript" src="js/index.js"></script>
-       <!--Import jQuery before materialize.js-->
-       <script type="text/javascript" src="js/jQuery.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-animate.js"></script>
-        <script src="js/plugins.js"></script>
-        <!-- adding Google's official script -->
-        <script src="js/dontlook.js"></script>
-        <script src="//apis.google.com/js/client.js?onload=googleApiClientReady"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.js"></script>
-        <script src="js/swag.js"></script>
-        <script src="js/boobs.js"></script>
-        <script src="js/controller.js"></script>
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
+
+
+          </body>
+          <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+          <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+              function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-41090605-2','auto');ga('send','pageview');
-        </script>
-</html>
+          </script>
+          </html>
