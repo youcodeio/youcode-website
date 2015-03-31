@@ -124,7 +124,7 @@ var conferences = [
 			{
 				"year":2005,
 				"link":"https://video.fosdem.org/"
-			},
+			}
 		]
 	},
 	{
@@ -160,5 +160,5 @@ var conferences = [
 				"link":"https://www.parleys.com/channel/devoxx-2013"
 			}
 		]
-	},
+	}
 ];
