@@ -1,7 +1,7 @@
 var conferences = [
 	{
 		"name":"Google I/O",
-		"description":"Google I/O is an annual software developer-focused conference held by Google in San Francisco, California",
+		"description":"An annual software developer-focused conference held by Google in San Francisco, California",
 		"session" :[
 			{
 				"year":2014,
@@ -19,7 +19,7 @@ var conferences = [
 		"session" :[
 			{
 				"year":2014,
-				"link":"&query=dotgo%202014"
+				"link":"#/search?query=dotGo%202014&isTuts=false"
 			}
 		]
 	},
@@ -29,7 +29,7 @@ var conferences = [
 		"session" :[
 			{
 				"year":2014,
-				"link":"&query=dotjs%202014"
+				"link":"#/search?query=dotJS%202014&isTuts=false"
 			}
 		]
 	},
@@ -39,11 +39,11 @@ var conferences = [
 		"session" :[
 			{
 				"year":2014,
-				"link":"&query=dotscale%202014"
+				"link":"#/search?query=dotScale%202014&isTuts=false"
 			},
 			{
 				"year":2013,
-				"link":"&query=dotscale%202013"
+				"link":"#/search?query=dotScale%202013&isTuts=false"
 			}
 		]
 	},
@@ -53,7 +53,7 @@ var conferences = [
 		"session" :[
 			{
 				"year":2013,
-				"link":"&query=dotruby%202013"
+				"link":"#/search?query=dotRB%202014&isTuts=false"
 			}
 		]
 	},
@@ -63,7 +63,7 @@ var conferences = [
 		"session" :[
 			{
 				"year":2014,
-				"link":"&query=dotscale%202014"
+				"link":"#/search?query=dotCSS%202014&isTuts=false"
 			}
 		]
 	},
@@ -82,47 +82,7 @@ var conferences = [
 		"description":"FOSDEM is a free event for software developers to meet, share ideas and collaborate.",
 		"session" :[
 			{
-				"year":2015,
-				"link":"https://video.fosdem.org/"
-			},
-			{
-				"year":2014,
-				"link":"https://video.fosdem.org/"
-			},
-			{
-				"year":2013,
-				"link":"https://video.fosdem.org/"
-			},
-			{
-				"year":2012,
-				"link":"https://video.fosdem.org/"
-			},
-			{
-				"year":2011,
-				"link":"https://video.fosdem.org/"
-			},
-			{
-				"year":2010,
-				"link":"https://video.fosdem.org/"
-			},
-			{
-				"year":2009,
-				"link":"https://video.fosdem.org/"
-			},
-			{
-				"year":2008,
-				"link":"https://video.fosdem.org/"
-			},
-			{
-				"year":2007,
-				"link":"https://video.fosdem.org/"
-			},
-			{
-				"year":2006,
-				"link":"https://video.fosdem.org/"
-			},
-			{
-				"year":2005,
+				"year":"from 2005 to now",
 				"link":"https://video.fosdem.org/"
 			}
 		]
@@ -133,7 +93,11 @@ var conferences = [
 		"session" :[
 			{
 				"year":2014,
-				"link":"&query=dotscale%20205"
+				"link":"#/search?query=ng-conf%202014&isTuts=false"
+			},
+			{
+				"year":2015,
+				"link":"#/search?query=ng-conf%202015&isTuts=false"
 			}
 		]
 	},
@@ -143,13 +107,13 @@ var conferences = [
 		"session" :[
 			{
 				"year":2014,
-				"link":"&query=dconf%20205"
+				"link":"#/search?query=dconf%202014&isTuts=false"
 			}
 		]
 	},
 	{
 		"name":"Devoxx",
-		"description":"Devoxx",
+		"description":"Annual European Java, Android and HTML5 conference",
 		"session" :[
 			{
 				"year":2014,

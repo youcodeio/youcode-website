@@ -5,3 +5,9 @@
             <img src="img/construction.png" alt="logo construction">
         </center>
       </div>
+
+      <div class="container">
+      <ul class="collection" ng-repeat="conference in conferences">
+        <p class="collection-item">{{conference.name}}: <span>{{conference.description}}</span><span class="badge" ng-repeat="conference_session in conference.session"><a target="_blank" ng-href="{{conference_session.link}}">{{conference_session.year}}</a></span></p>
+      </ul>
+      </div>

@@ -21,7 +21,8 @@ this.searchVideo = function (q,id) {
 					part: 'id,snippet',
 					channelId: id,
 					order: 'date',
-					type: 'video'
+					type: 'video',
+					maxResults: '50'
 				});
 				request.execute(function(response) {
 					if ('error' in response) {
