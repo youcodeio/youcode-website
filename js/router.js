@@ -4,6 +4,7 @@ var routerApp = angular.module('youcodeio', ['ui.router',
                                             'youcodeio.controllers.channels',
                                             'youcodeio.services',
                                             'youcodeio.controllers.header',
+                                            'youcodeio.controllers.conf',
                                             'youcodeio.controllers.data']);
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
@@ -42,7 +43,14 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
         .state('data', {
             url: '/data',
-            templateUrl: 'partials/data.html'
+            templateUrl: 'partials/data.html',
+            controller: 'DataCtrl'
+        })
+
+        .state('conferences', {
+            url: '/conferences',
+            templateUrl: 'partials/conferences.html',
+            controller: 'ConfCtrl'
         })
         
 });
