@@ -1,4 +1,4 @@
-angular.module('youcodeio.controllers.welcome', []).controller('WelcomeCtrl', function ($q,$scope,googleService,$state) {
+angular.module('youcodeio.controllers.search', []).controller('SearchCtrl', function ($q,$scope,googleService,$state) {
 
 	$scope.channels = [];
 	$scope.isTuts = false;
@@ -73,11 +73,23 @@ angular.module('youcodeio.controllers.welcome', []).controller('WelcomeCtrl', fu
 	}
 	$scope.changeToggle = function () {
 		$scope.isTuts = !$scope.isTuts;
-		$scope.search();
+		window.location.assign("#/search?query="+$scope.query+"&isTuts="+$scope.isTuts);
 	}
 
+
 	if(typeof($state.params.query)!='undefined'){
-    		$scope.startSearch(decodeURI($state.params.query));
+		if(typeof($state.params.isTuts)!='undefined'){
+							if ($state.params.isTuts === 'false') {
+					$scope.isTuts = false;
+				} else{
+					$scope.isTuts = true;
+				}
+    			$scope.startSearch(decodeURI($state.params.query));
+    		}else{
+    			window.location.assign('#');
+    		}
+    	}else{
+    		window.location.assign('#/');
     	}
 
 });

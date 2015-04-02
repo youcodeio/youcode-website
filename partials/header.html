@@ -23,13 +23,13 @@
 
     </div>
     <div class="col s2 m2 l4">
-     <a class="btn-floating btn-large waves-effect waves-light red" ng-click="search()"><i class="mdi-action-done"></i></a>   
+     <a class="btn-floating btn-large waves-effect waves-light red" ng-href="{{startSearch()}}"><i class="mdi-action-done"></i></a>   
     </div>  
 
     </div>
     <div class="row col s12 m12 l12">
       <div class="explain">
-        <p class="text_explain"> Popular Search : <a ng-click="startSearch('HTTP/2')" href="">HTTP/2</a>, <a ng-click="startSearch('AngularJS')" href="">AngularJS</a>, <a ng-click="startSearch('Docker')" href="">Docker</a>, <a ng-click="startSearch('HTML5')" href="">HTML5</a> </p>
+        <p class="text_explain"> Popular Search : <a ng-click="startPopular('HTTP/2')" ng-href="{{startSearch()}}">HTTP/2</a>, <a ng-click="startPopular('AngularJS')" ng-href="{{startSearch()}}">AngularJS</a>, <a ng-click="startPopular('Docker')" ng-href="{{startSearch()}}">Docker</a>, <a ng-click="startPopular('HTML5')" ng-href="{{startSearch()}}">HTML5</a> </p>
       </div>
     </div>
     <div class="row col s12 m12 l12">
@@ -38,7 +38,7 @@
      <div class="switch choix center-align">
       <label>
         Talks
-        <input type="checkbox" ng-model="isTuts" ng-click="search()">
+        <input type="checkbox" ng-model="isTuts" ng-click="toggleTuts()">
         <span class="lever"></span>
         Tutorials
       </label>
@@ -47,3 +47,5 @@
     </div>
 
     </div>
+
+     <div ui-view></div>

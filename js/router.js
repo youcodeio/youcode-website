@@ -1,18 +1,28 @@
 // app.js
-var routerApp = angular.module('youcodeio', ['ui.router','youcodeio.controllers.welcome','youcodeio.controllers.channels','youcodeio.services']);
+var routerApp = angular.module('youcodeio', ['ui.router','youcodeio.controllers.search','youcodeio.controllers.channels','youcodeio.services','youcodeio.controllers.header']);
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
     
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/home');
     
     $stateProvider
         
         // HOME STATES AND NESTED VIEWS ========================================
-        .state('welcome', {
-            url: '/?query',
-            templateUrl: 'partials/welcome.html',
-            controller: 'WelcomeCtrl'
+        .state('header', {
+            templateUrl: 'partials/header.html',
+            controller: 'HeaderCtrl'
         })
+
+        .state('header.welcome', {
+            url:'/home',
+            templateUrl: 'partials/welcome.html'
+            })
+
+        .state('header.search', {
+            url:'/search?query?isTuts',
+            templateUrl: 'partials/search.html',
+            controller: 'SearchCtrl'
+            })
         
         .state('channels', {
             url: '/channels',
