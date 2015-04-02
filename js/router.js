@@ -1,5 +1,10 @@
 // app.js
-var routerApp = angular.module('youcodeio', ['ui.router','youcodeio.controllers.search','youcodeio.controllers.channels','youcodeio.services','youcodeio.controllers.header']);
+var routerApp = angular.module('youcodeio', ['ui.router',
+                                            'youcodeio.controllers.search',
+                                            'youcodeio.controllers.channels',
+                                            'youcodeio.services',
+                                            'youcodeio.controllers.header',
+                                            'youcodeio.controllers.data']);
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
     
@@ -28,10 +33,16 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             url: '/channels',
             templateUrl: 'partials/channels.html',
             controller: 'ChannelsCtrl'
-        })        
+        })  
+
         .state('about', {
             url: '/about',
             templateUrl: 'partials/about.html'
+        })
+
+        .state('data', {
+            url: '/data',
+            templateUrl: 'partials/data.html'
         })
         
 });
