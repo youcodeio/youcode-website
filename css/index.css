@@ -1,237 +1,84 @@
+
 /*
 -------------------------------------------------------------------
 -------------------------------------------------------------------
 -------------------------------------------------------------------
-                        INDEX.HTML
+                        HEADER.HTML
 -------------------------------------------------------------------
 -------------------------------------------------------------------
 -------------------------------------------------------------------
 */
-
-/*CSS Youcode pour le fichier index.html*/
-img{
-    height: 70px;
-}
-
-.choix{
+/*CSS Youcode pour le fichier header.html*/
+.header_choix{
     position: relative;
     bottom: 20px;
 }
 
-.search{
+.header_search{
     color: white;
 }
 
-/*Toast pour informer que nous sommes encore en dev et en Beta*/
-.toast_beta{
-    font-weight: bold;
-    padding-left: 5px;
+.header_position_search{
+    position: relative;
+    bottom:180px;
+    z-index: 1;
 }
 
-/*hover sur les cards*/
-.cardhover{
-    position: absolute;
+.header_explain{
     width: 100%;
-    height: 100%;
-    z-index: 20;
-    background-color: rgba(255,60,50,0.9);
-    
 }
 
-.cardhover.ng-enter {
-  -webkit-animation: slideInDown 0.4s;
-  -moz-animation: slideInDown 0.4s;
-  -o-animation: slideInDown 0.4s;
-  -ms-animation: slideInDown 0.4s;
-    
-}
-.titreVideo{
-    font-size: 1.1em;
-    font-weight: 200;
-    padding-right: 10px;
-    padding-left: 10px;
-    text-align: center;
-}
-
-.descriptionVideo{
-    font-size: 0.8em;
-    padding-right: 10px;
-    padding-left: 10px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.pos{
-    position: absolute;
-    bottom: -10px;
-    right: 0px;
-}
-
-/*gestion de la taille du texte de description des cards*/
-
-.video_description{
-    font-size: 1em;
-}
-
-.channel_info{
-    font-size: 0.7em;
-    text-align: center;
-}
-
-.channel_info_date{
-    font-size: 0.7em;
-    font-weight: bold;
-    color: red;
-    text-align: right;
-  white-space:nowrap;
-    width: 10px; /* à modifier selon vos besoins */
-    overflow: hidden;
-    -o-text-overflow: ellipsis; /* pour Opera 9 */
-    text-overflow: ellipsis; /* pour le reste du monde */
-}
-
-.taille_content{
-    height: 100px;
-}
-
-.title_card_modif{
-    white-space: nowrap;
-  -o-text-overflow: ellipsis; /* pour Opera 9 */
-  text-overflow: ellipsis; 
- width: 100%; /* à modifier selon vos besoins */
-      overflow: hidden;
-  
-    font-size: 0.8em;
-}
-
-
-.icone{
-    font-size: 30px;
-    
-}
-
-.card_css{
-    width: 100%;
-    height: 100%;
-}
-
-.explain{
-    width: 100%;
-    
-}
-
-.text_explain{
+.header_text_explain{
     text-align: center;
     color: rgba(0,0,0,0.4);
     font-weight: 300;
 }
 
-.text_explain a{
+.header_text_explain a{
     color: #FF0603 ;
 }
 
-
-/*  préparation de l'about dans la page home avec  
-    les techno utiliser
-*/
-.about{
-    width: 100%;
-    height: 500px;
-   display: block;
-    margin-bottom: 100px;
-}
-
-
-.explanation{
-    width: 100%;
-}
-
-.text_explanation{
-    font-size: 3em;
-    font-weight: 100;
-}
-
-.tecnho_use{
-
-}
-
-.texte_about{
-    font-size: 2em;
-    font-weight: 100;
-}
-
-.text_description{
-    font-weight: 400;
-    
-}
-
-i{
-    color: white;
-}
-
-.position_container{
-    position: relative;
-    bottom: 100px;
-}
-
-.position_recherche{
-    position: relative;
-    bottom: 150px;
-}
-
-
-
 @media screen and (min-width: 1001px){
-  .toto{
-  
-    z-index: 0;
-    position: absolute;
-    background-image: url(background/banniere_youcode_fusion.svg);
-    background-repeat: no-repeat;
-    
-    background-position: center;
-    background-origin: border-box;
-    width: 100%;
-    height: 450px;
-}
+    .header_toto{
+        z-index: 0;
+        position: absolute;
+        background-image: url(background/banniere_youcode_fusion.svg);
+        background-repeat: no-repeat;
 
+        background-position: center;
+        background-origin: border-box;
+        width: 100%;
+        height: 450px;
+    }
 }
 
 @media screen and (min-width: 200px) and (max-width: 1000px) {
-  .toto{
-  
-    z-index: 0;
-    position: absolute;
-    background-image: url(background/banniere_youcode_tablette_fusion.svg);
-    background-repeat: no-repeat;
-    
-    background-position: center;
-    background-origin: border-box;
-    width: 100%;
-    height: 450px;
-}
-
+    .header_toto{
+        z-index: 0;
+        position: absolute;
+        background-image: url(background/banniere_youcode_tablette_fusion.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-origin: border-box;
+        width: 100%;
+        height: 450px;
+    }
 }
 
 @media screen and (max-width: 200px) {
-  .toto{
-  
-    z-index: 0;
-    position: absolute;
-    background-image: url(background/banniere_youcode_fusion.svg);
-    background-repeat: no-repeat;
-    
-    background-position: center;
-    background-origin: border-box;
-    width: 100%;
-    height: 450px;
+    .header_toto{
+        z-index: 0;
+        position: absolute;
+        background-image: url(background/banniere_youcode_fusion.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-origin: border-box;
+        width: 100%;
+        height: 450px;
+    }
 }
 
-}
-
-
-.flou{
-  
+.header_flou{
     z-index: -1;
     background-image: url(background/flou.png);
     background-repeat: no-repeat;
@@ -242,48 +89,170 @@ i{
     height: 540px;
 }
 
-
-
-
-.position_search{
+/*
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+                        WELCOME.HTML
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+*/
+/*CSS Youcode pour le fichier welcome.html*/
+.welcome_position_container {
     position: relative;
-    bottom:180px;
-    z-index: 1;
+    bottom: 150px;
 }
 
-.title{
+/*  préparation de l'about dans la page home avec  
+    les techno utiliser
+*/
+.welcome_about{
+    width: 100%;
+    height: 500px;
+    display: block;
+    margin-bottom: 100px;
+}
+
+.welcome_explanation{
+    width: 100%;
+}
+
+.welcome_text_explanation{
+    font-size: 3em;
     font-weight: 100;
-   
 }
 
-.youtube{
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.video_description{
+.welcome_text_about{
+    font-size: 2em;
     font-weight: 100;
 }
 
-.swag.ng-enter { 
+.welcome_text_description{
+    font-weight: 400;
+}
+
+/*
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+                        SEARCH.HTML
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+*/
+/*CSS Youcode pour le fichier search.html*/
+.search_contentPosition{
+    position: relative;
+    bottom: 150px;
+}
+
+.search_title{
+    font-weight: 100;
+}
+
+/*hover sur les cards*/
+.search_cardHover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background-color: rgba(255,60,50,0.9);
+    -webkit-animation: slideInDown 0.4s;
+    -moz-animation: slideInDown 0.4s;
+    -o-animation: slideInDown 0.4s;
+    -ms-animation: slideInDown 0.4s;
+}
+
+.search_cardHoverVideoTitle{
+    font-size: 1.1em;
+    font-weight: 200;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.search_cardHoverVideoDescription{
+    font-size: 0.8em;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.search_cardHoverButtonPosition{
+    position: absolute;
+    bottom: -10px;
+    right: 0px;
+}
+
+.search_cardImage{
+    width: 100%;
+    height: 100%;
+}
+
+.search_cardContentVideoTitle{
+    height: 100px;
+}
+
+.search_cardVideoTitle{
+    font-size: 0.8em;
+    text-align: center;
+}
+
+
+.search_channelTitle{
+    font-size: 0.7em;
+    text-align: center;
+}
+
+.search_channelPublishedAt{
+    font-size: 0.7em;
+    font-weight: bold;
+    color: red;
+    text-align: right;
+    white-space:nowrap;
+    width: 10px; /* à modifier selon vos besoins */
+    overflow: hidden;
+    -o-text-overflow: ellipsis; /* pour Opera 9 */
+    text-overflow: ellipsis; /* pour le reste du monde */
+}
+
+
+/*
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+                        INDEX.HTML
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+*/
+/*CSS Youcode pour le fichier index.html*/
+.index_youcodeLogo{
+    height: 60px;
+}
+
+.index_construction{
+    font-size: 5em;
+    text-align: center;
+    font-weight: 100;
+}
+
+/*Toast pour informer que nous sommes encore en dev et en Beta*/
+.toast_beta{
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+/*Animation of search.html and welcome.html content */
+.index_swag { 
   -webkit-animation: fadeInUp 1.5s;
   -moz-animation: fadeInUp 1.5s;
   -o-animation: fadeInUp 1.5s;
   -ms-animation: fadeInUp 1.5s;
 }
-.swag.ng-leave { 
-  -webkit-animation: fadeInUp 1.5s;
-  -moz-animation: fadeInUp 1.5s;
-  -o-animation: fadeInUp 1.5s;
-  -ms-animation: fadeInUp 1.5s;
-}
 
-.cat.ng-enter {
-  -webkit-animation: fadeInUp 1s;
-  -moz-animation: fadeInUp 1s;
-  -o-animation: fadeInUp 1s;
-  -ms-animation: fadeInUp 1s;
-}
 /*
 -------------------------------------------------------------------
 -------------------------------------------------------------------
@@ -293,17 +262,15 @@ i{
 -------------------------------------------------------------------
 -------------------------------------------------------------------
 */
-/*CSS de la page about*/
-.logo_youcode{
-    height: 70px;
+/*CSS Youcode pour le fichier about.html*/
+.about_images{
+    max-height: 200px;
 }
 
-.construction{
-    font-size: 5em;
+.about_title{
     text-align: center;
     font-weight: 100;
 }
-
 
 /*
 -------------------------------------------------------------------
@@ -314,11 +281,12 @@ i{
 -------------------------------------------------------------------
 -------------------------------------------------------------------
 */
-
-.youcode_channels{
+/*CSS Youcode pour le fichier channels.html*/
+.channels_title{
     text-align: center;
     font-weight: 100;
 }
+
 
 
 

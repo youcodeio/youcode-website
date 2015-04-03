@@ -46,17 +46,17 @@
   <script src="js/milf.js"></script>
 
   <script type="text/javascript" src="js/YoutubeService.js"></script>
-    <!-- Main controller for routing-->
+  <!-- Main controller for routing-->
   <script src="js/router.js"></script>
 
   <script type="text/javascript" src="js/ChannelsCtrl.js"></script>
-    <!-- Loading different controllers -->
+  <!-- Loading different controllers -->
   <script type="text/javascript" src="js/SearchCtrl.js"></script>
   <script type="text/javascript" src="js/HeaderCtrl.js"></script>
   <script type="text/javascript" src="js/DataCtrl.js"></script>
   <script type="text/javascript" src="js/ConfCtrl.js"></script>
 
-      <!-- load Google's official script -->
+  <!-- load Google's official script -->
   <script src="//apis.google.com/js/client.js?onload=googleApiClientReady"></script>
 
 
@@ -73,7 +73,7 @@
             <nav>
               <div class="nav-wrapper red">
                 <a href="#/" class="brand-logo">
-                  <img src="img/youcode_logo.svg" alt="Logo YouCode" class="logo_youcode">
+                <img src="img/youcode_logo.svg" alt="Logo YouCode" class="index_youcodeLogo">
                 </a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse "><i class="mdi-navigation-menu white-text"></i></a>
                 <ul class="right hide-on-med-and-down">
@@ -93,13 +93,10 @@
               </div>
             </nav>
 
-            
-
+            <!-- Handling views with UI-Router -->
             <div ui-view></div>
-
-
-
             
+            <!-- Footer -->
             <footer class="page-footer red">
               <div class="container">
                 <div class="row">
@@ -121,7 +118,6 @@
               <div class="footer-copyright">
                 <div class="container">
                   © 2015 Copyright YouCode.io
-
                 </div>
               </div>
             </footer>
