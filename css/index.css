@@ -351,8 +351,73 @@
     font-weight: 100;
 }
 
+.channels_lastChannelsWhoPublishedLastVideo{
+    height: 385px;
+}
+
+.channels{
+    height: 80px;
+}
+
+.channels_channelLogo{
+    height: 100%;
+}
+
+.channels_channelLogoImage{
+    margin-left: -12px;
+    height: 100%;
+}
+
+.channels_channelBanner{
+    height: 100%;
+    background-image: url(../img/ailye_banner.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.channels_channelTitle{
+    text-align: center;
+    color: white;
+}
 
 
+
+
+/* last channel */
+
+.channels_lastChannel{
+    height: 80px;
+    -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.channels_lastChannelLogo{
+    height: 100%;
+}
+
+.channels_lastChannelLogoImage{
+    margin-left: -12px;
+    height: 100%;
+}
+
+.channels_lastChannelBanner{
+    height: 100%;
+    background-image: url(../img/ailye_banner.png);
+    background-size: 160%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.channels_lastChannelTitle{
+    text-align: center;
+    color: white;
+}
+
+.channels_lastChannelVideo1{}
+
+.channels_lastChannelVideo2{}
 
 
 

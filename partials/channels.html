@@ -1,27 +1,190 @@
-        <div id="SoMuchChannels" class="container">
-              <!-- Page Content goes here -->
-            <div class="row">
-              <div class="col s10 m10 l10 valign-wrapper">
-                <h3 class="valign channels_title">YouCode channels</h3>
-              </div>
-              <div class="progress col S12 m12 l12" ng-if="unicorn">
-                  <div class="indeterminate"></div>
-              </div>
-            </div>
-             <div class="row">
-                <div class="col s12 grid-example">
-                    <ul class="collapsible" data-collapsible="accordion" >
-                        <li class="col s12" ng-repeat="channel in channels track by $index">
-                          <div class="collapsible-header"><i class="mdi-hardware-tv"></i>
-                          <div class="col s8 videoTitle">{{channel.channel_name}}</div>
-                          </div>
-                          <div class="collapsible-body">
-                            <p>cool</p>
-                          </div> 
-
-                        </li>
-                    </ul>      
-                </div>
-            </div>
-
-        </div>    
+<div id="SoMuchChannels" class="container">
+  <!-- Page Content goes here -->
+  <div class="row">
+    <div class="col s10 m10 l10 valign-wrapper">
+      <h3 class="valign channels_title">YouCode channels</h3>
+    </div>
+    <div class="progress col S12 m12 l12" ng-if="unicorn">
+      <div class="indeterminate"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 m8 l6 channels_lastChannelsWhoPublishedLastVideo">
+      <div class="card channels_lastChannelsWhoPublishedLastVideo">
+        <div class="channels_lastChannel">
+        <div class="col m6 l4 channels_lastChannelLogo">
+          <img class="channels_lastChannelLogoImage" src="../img/ailye_logo.png">
+        </div>
+        <div class="channels_lastChannelTitle red">
+          Ailye
+        </div>
+        <div class="channels_lastChannelBanner">
+        </div>
+        <!-- content : 2 last videos -->
+        <div class="col s12 m12 l12 channels_lastChannelVideo1">
+          <p>first video</p>
+        </div>
+        <div class="col s12 m12 l12 channels_lastChannelVideo2">
+          <p> second video</p>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- cards -->
+    <div class="col s6 m4 l3 ">
+      <div class="card channels">
+        <div class="col m6 l4 channels_channelLogo">
+          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
+        </div>
+        <div class="channels_channelTitle red">
+          Ailye
+        </div>
+        <div class="channels_channelBanner">
+        </div>
+      </div>
+    </div>
+    <!-- cards -->
+    <div class="col s6 m4 l3 ">
+      <div class="card channels">
+        <div class="col m6 l4 channels_channelLogo">
+          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
+        </div>
+        <div class="channels_channelTitle red">
+          Ailye
+        </div>
+        <div class="channels_channelBanner">
+        </div>
+      </div>
+    </div>
+    <!-- cards -->
+    <div class="col s6 m4 l3 ">
+      <div class="card channels">
+        <div class="col m6 l4 channels_channelLogo">
+          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
+        </div>
+        <div class="channels_channelTitle red">
+          Ailye
+        </div>
+        <div class="channels_channelBanner">
+        </div>
+      </div>
+    </div>
+    <!-- cards -->
+    <div class="col s6 m4 l3 ">
+      <div class="card channels">
+        <div class="col m6 l4 channels_channelLogo">
+          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
+        </div>
+        <div class="channels_channelTitle red">
+          Ailye
+        </div>
+        <div class="channels_channelBanner">
+        </div>
+      </div>
+    </div>
+    <!-- cards -->
+    <div class="col s6 m4 l3 ">
+      <div class="card channels">
+        <div class="col m6 l4 channels_channelLogo">
+          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
+        </div>
+        <div class="channels_channelTitle red">
+          Ailye
+        </div>
+        <div class="channels_channelBanner">
+        </div>
+      </div>
+    </div>
+    <!-- cards -->
+    <div class="col s6 m4 l3 ">
+      <div class="card channels">
+        <div class="col m6 l4 channels_channelLogo">
+          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
+        </div>
+        <div class="channels_channelTitle red">
+          Ailye
+        </div>
+        <div class="channels_channelBanner">
+        </div>
+      </div>
+    </div>
+    <!-- cards -->
+    <div class="col s6 m4 l3 ">
+      <div class="card channels">
+        <div class="col m6 l4 channels_channelLogo">
+          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
+        </div>
+        <div class="channels_channelTitle red">
+          Ailye
+        </div>
+        <div class="channels_channelBanner">
+        </div>
+      </div>
+    </div>
+    <!-- cards -->
+    <div class="col s6 m4 l3 ">
+      <div class="card channels">
+        <div class="col m6 l4 channels_channelLogo">
+          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
+        </div>
+        <div class="channels_channelTitle red">
+          Ailye
+        </div>
+        <div class="channels_channelBanner">
+        </div>
+      </div>
+    </div>
+    <!-- cards -->
+    <div class="col s6 m4 l3 ">
+      <div class="card channels">
+        <div class="col m6 l4 channels_channelLogo">
+          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
+        </div>
+        <div class="channels_channelTitle red">
+          Ailye
+        </div>
+        <div class="channels_channelBanner">
+        </div>
+      </div>
+    </div>
+    <!-- cards -->
+    <div class="col s6 m4 l3 ">
+      <div class="card channels">
+        <div class="col m6 l4 channels_channelLogo">
+          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
+        </div>
+        <div class="channels_channelTitle red">
+          Ailye
+        </div>
+        <div class="channels_channelBanner">
+        </div>
+      </div>
+    </div>
+    <!-- cards -->
+    <div class="col s6 m4 l3 ">
+      <div class="card channels">
+        <div class="col m6 l4 channels_channelLogo">
+          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
+        </div>
+        <div class="channels_channelTitle red">
+          Ailye
+        </div>
+        <div class="channels_channelBanner">
+        </div>
+      </div>
+    </div>
+    <!-- cards -->
+    <div class="col s6 m4 l3 ">
+      <div class="card channels">
+        <div class="col m6 l4 channels_channelLogo">
+          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
+        </div>
+        <div class="channels_channelTitle red">
+          Ailye
+        </div>
+        <div class="channels_channelBanner">
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>  
