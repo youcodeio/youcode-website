@@ -351,12 +351,46 @@
     font-weight: 100;
 }
 
-.channels_lastChannelsWhoPublishedLastVideo{
-    height: 385px;
+@media screen and (min-width: 601px) {
+    .channels_lastChannelsWhoPublishedLastVideo{
+        height: 385px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .channels_lastChannelsWhoPublishedLastVideo{
+        height: 380px;
+        margin-bottom: 20px;
+    }
 }
 
 .channels{
     height: 80px;
+}
+
+/*hover sur les cards*/
+.channels_cardHover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background-color: rgba(255,60,50,0.9);
+    -webkit-animation: slideInDown 0.4s;
+    -moz-animation: slideInDown 0.4s;
+    -o-animation: slideInDown 0.4s;
+    -ms-animation: slideInDown 0.4s;
+}
+
+.channels_lastChannelIconeView{
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.channels_lastChannelIconePlus{
+    width: 100%;
+    text-align: center;
 }
 
 .channels_channelLogo{
@@ -380,6 +414,8 @@
     text-align: center;
     color: white;
 }
+
+
 
 
 
@@ -415,15 +451,29 @@
     color: white;
 }
 
-.channels_lastChannelVideo1{}
+.channels_latsChannelYoutubeButton{
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+}
 
-.channels_lastChannelVideo2{}
+.channels_lastChannelVideoThumbnail{
+    width: 100%;
+    position: relative;
+    top: 10px;
+}
+.channels_lastChannelVideoTitle{
+    font-size: 0.7em;
+    font-weight: bold;
+}
 
+.channels_lastChannelVideoDescription{
+    font-weight: normal;
+}
 
-
-
-
-
+.channels_lastChannelVideoPublishedAt{
+    font-weight: bold;
+}
 
 
 
