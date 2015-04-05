@@ -14,10 +14,10 @@
       <div class="card channels_lastChannelsWhoPublishedLastVideo">
         <div class="channels_lastChannel">
         <div class="col m6 l4 channels_lastChannelLogo">
-          <img class="channels_lastChannelLogoImage z-depth-2" src="../img/ailye_logo.png">
+          <img class="channels_lastChannelLogoImage z-depth-2" src="{{channel.channel_logo.url}}">
         </div>
         <div class="channels_lastChannelTitle red">
-          Ailye
+          {{channel.channel_name}}
         </div>
         <div class="channels_lastChannelBanner">
         </div>
@@ -62,7 +62,7 @@
       </div>
     </div>
     <!-- cards -->
-    <div class="col s6 m4 l3 ">
+    <div class="col s6 m4 l3 " ng-repeat="channel in channels track by $index">
       <div class="card channels" ng-mouseenter="channels_show = true" ng-mouseleave="channels_show = false">
         <div class="channels_cardHover" ng-if="channels_show">
           <a href="" class="col s12 m12 l12 channels_lastChannelIconeView  waves-effect waves-light">
@@ -73,155 +73,12 @@
           </a>
         </div>
         <div class="col m6 l4 channels_channelLogo">
-          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
+          <img class="channels_channelLogoImage" src="{{channel.channel_logo.url}}">
         </div>
         <div class="channels_channelTitle red">
-          Ailye
+          {{channel.channel_name}}
         </div>
-        <div class="channels_channelBanner">
-        </div>
-      </div>
-    </div>
-    <!-- cards -->
-    <div class="col s6 m4 l3 ">
-      <div class="card channels">
-        <div class="col m6 l4 channels_channelLogo">
-          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
-        </div>
-        <div class="channels_channelTitle red">
-          Ailye
-        </div>
-        <div class="channels_channelBanner">
-        </div>
-      </div>
-    </div>
-    <!-- cards -->
-    <div class="col s6 m4 l3 ">
-      <div class="card channels">
-        <div class="col m6 l4 channels_channelLogo">
-          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
-        </div>
-        <div class="channels_channelTitle red">
-          Ailye
-        </div>
-        <div class="channels_channelBanner">
-        </div>
-      </div>
-    </div>
-    <!-- cards -->
-    <div class="col s6 m4 l3 ">
-      <div class="card channels">
-        <div class="col m6 l4 channels_channelLogo">
-          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
-        </div>
-        <div class="channels_channelTitle red">
-          Ailye
-        </div>
-        <div class="channels_channelBanner">
-        </div>
-      </div>
-    </div>
-    <!-- cards -->
-    <div class="col s6 m4 l3 ">
-      <div class="card channels">
-        <div class="col m6 l4 channels_channelLogo">
-          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
-        </div>
-        <div class="channels_channelTitle red">
-          Ailye
-        </div>
-        <div class="channels_channelBanner">
-        </div>
-      </div>
-    </div>
-    <!-- cards -->
-    <div class="col s6 m4 l3 ">
-      <div class="card channels">
-        <div class="col m6 l4 channels_channelLogo">
-          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
-        </div>
-        <div class="channels_channelTitle red">
-          Ailye
-        </div>
-        <div class="channels_channelBanner">
-        </div>
-      </div>
-    </div>
-    <!-- cards -->
-    <div class="col s6 m4 l3 ">
-      <div class="card channels">
-        <div class="col m6 l4 channels_channelLogo">
-          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
-        </div>
-        <div class="channels_channelTitle red">
-          Ailye
-        </div>
-        <div class="channels_channelBanner">
-        </div>
-      </div>
-    </div>
-    <!-- cards -->
-    <div class="col s6 m4 l3 ">
-      <div class="card channels">
-        <div class="col m6 l4 channels_channelLogo">
-          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
-        </div>
-        <div class="channels_channelTitle red">
-          Ailye
-        </div>
-        <div class="channels_channelBanner">
-        </div>
-      </div>
-    </div>
-    <!-- cards -->
-    <div class="col s6 m4 l3 ">
-      <div class="card channels">
-        <div class="col m6 l4 channels_channelLogo">
-          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
-        </div>
-        <div class="channels_channelTitle red">
-          Ailye
-        </div>
-        <div class="channels_channelBanner">
-        </div>
-      </div>
-    </div>
-    <!-- cards -->
-    <div class="col s6 m4 l3 ">
-      <div class="card channels">
-        <div class="col m6 l4 channels_channelLogo">
-          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
-        </div>
-        <div class="channels_channelTitle red">
-          Ailye
-        </div>
-        <div class="channels_channelBanner">
-        </div>
-      </div>
-    </div>
-    <!-- cards -->
-    <div class="col s6 m4 l3 ">
-      <div class="card channels">
-        <div class="col m6 l4 channels_channelLogo">
-          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
-        </div>
-        <div class="channels_channelTitle red">
-          Ailye
-        </div>
-        <div class="channels_channelBanner">
-        </div>
-      </div>
-    </div>
-    <!-- cards -->
-    <div class="col s6 m4 l3 ">
-      <div class="card channels">
-        <div class="col m6 l4 channels_channelLogo">
-          <img class="channels_channelLogoImage" src="../img/ailye_logo.png">
-        </div>
-        <div class="channels_channelTitle red">
-          Ailye
-        </div>
-        <div class="channels_channelBanner">
+        <div class="channels_channelBanner" ng-style="{'background-image': 'url({{channel.channel_banner}})'}">
         </div>
       </div>
     </div>
