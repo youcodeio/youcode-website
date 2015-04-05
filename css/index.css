@@ -413,6 +413,8 @@
 .channels_channelTitle{
     text-align: center;
     color: white;
+    font-size: 0.8em;
+    font-weight: 300;
 }
 
 
