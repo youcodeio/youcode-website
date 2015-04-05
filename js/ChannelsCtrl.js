@@ -44,11 +44,22 @@ angular.module('youcodeio.controllers.channels', [])
 					channel_video: []
 				};
 			angular.forEach(value.items, function(result,key2){
-			$scope.channels[key].channel_video.push(result.snippet);
+				var video = {
+					video_title: result.snippet.title,
+					video_desc: result.snippet.description,
+					video_publishedAt: result.snippet.publishedAt,
+					video_thumbnails: result.snippet.thumbnails,
+					video_link: "https://www.youtube.com/watch?v="+result.id.videoId
+				};
+				$scope.channels[key].channel_video.push(video);
+				console.log($scope.channels[key].channel_name);
+				console.log(video.video_thumbnails.high.url);
+				if(video.video_thumbnails.high.url == ""){
+					console.log($scope.channels[key].name);
+				}
 			});
 		});
 		$scope.unicorn = false;
-        console.log($scope.channels);
 	};
 })
 
