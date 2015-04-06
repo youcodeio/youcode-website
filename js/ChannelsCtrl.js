@@ -47,7 +47,6 @@ angular.module('youcodeio.controllers.channels', [])
 			}
 			$scope.channels[key] = {
 					channel_name:d[key].items[0].snippet.title,
-					channel_logo: d[key].items[0].snippet.thumbnails.high,
 					channel_banner: d[key].items[0].brandingSettings.image.bannerImageUrl,
 					channel_mobileBanner: d[key].items[0].brandingSettings.image.bannerMobileHdImageUrl,
 					channel_link: "https://www.youtube.com/channel/"+d[key].items[0].id,
