@@ -3,10 +3,10 @@ angular.module('youcodeio.controllers.channels', [])
 	.controller('ChannelsCtrl', function ($q, $scope, googleService) {
 	$scope.channels = [];
 	$scope.query = "";
+	var alarmUrl = "http://s.ytimg.com/yts/img/channels/c4/default_banner-vfl7DRgTn.png";
 
 		console.log("initiate");
 
-		var bannerImageUrl;
 		var banners = [];
 		var savePromises = [];
 		$scope.unicorn = true;
@@ -39,6 +39,9 @@ angular.module('youcodeio.controllers.channels', [])
 		var videos = [];
 
 		angular.forEach(data, function(value,key) {
+			if(alarmUrl===d[key].items[0].brandingSettings.image.bannerImageUrl){
+				d[key].items[0].brandingSettings.image.bannerImageUrl = "img/default_banner.png";
+			}
 			$scope.channels[key] = {
 					channel_name:d[key].items[0].snippet.title,
 					channel_logo: d[key].items[0].snippet.thumbnails.high,
@@ -62,6 +65,10 @@ angular.module('youcodeio.controllers.channels', [])
 
 	$scope.changePrimary = function(channelObject){
 		$scope.show_channel = channelObject;
+	};
+
+	$scope.formatDate = function (date){
+		return 	moment(date.getTime(), "x").fromNow();
 	};
 });
 

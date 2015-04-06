@@ -50,12 +50,12 @@ this.searchLastTwovideos = function (q,id,name) {
 				}
 				else if(q == 2){
 					request = gapi.client.youtube.search.list({
-						q: q,
+						q: "",
 						part: 'id,snippet',
 						channelId: id,
 						order: 'date',
 						type: 'video', 
-						maxResults: '2'
+						maxResults: 2
 					});
 				}
 				request.execute(function(response) {
