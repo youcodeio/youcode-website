@@ -13,14 +13,13 @@
     <div class="col s12 m8 l6 channels_lastChannelsWhoPublishedLastVideo" ng-if="!unicorn">
       <div class="card channels_lastChannelsWhoPublishedLastVideo">
         <div class="channels_lastChannel">
-          <img class="channels_lastChannelBanner" src="{{show_channel.channel_banner}}">
-        <div class="col m6 l4 channels_lastChannelLogo">
-          <img class="channels_lastChannelLogoImage z-depth-2" src="{{show_channel.channel_logo.url}}">
-        </div>
-        <div class="channels_lastChannelTitle red">
-          {{show_channel.channel_name}}
-        </div>
-        
+          <div class="channels_lastChannelsContentImages row">
+            <div class="channels_lastChannelTitle red">
+              {{show_channel.channel_name}}
+            </div>
+            <img class="channels_lastChannelBanner" src="{{show_channel.channel_banner}}">
+          </div>
+          
         <!-- content : 2 last videos -->
         <div class="col s12 m12 l12 ">
           <div class="col s3 m3 l3 waves-block waves-effect waves-light">

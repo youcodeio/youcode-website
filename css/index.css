@@ -381,18 +381,6 @@
     -ms-animation: slideInDown 0.4s;
 }
 
-.channels_lastChannelIconeView{
-    width: 100%;
-    height: 50%;
-    text-align: center;
-    border-bottom: 1px solid white;
-}
-
-.channels_lastChannelIconePlus{
-    width: 100%;
-    text-align: center;
-}
-
 .channels_channelLogo{
     height: 100%;
     position: relative;
@@ -411,6 +399,7 @@
     position: absolute;
     height: 100%;
     z-index: 1;
+
 }
 
 .channels_channelTitle{
@@ -429,12 +418,28 @@
 
 
 /* last channel */
+.channels_lastChannelIconeView{
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.channels_lastChannelIconePlus{
+    width: 100%;
+    text-align: center;
+}
+
 
 .channels_lastChannel{
     height: 80px;
     -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.channels_lastChannelsContentImages{
+    height: 100px;
 }
 
 .channels_lastChannelLogo{
@@ -451,10 +456,9 @@
 }
 
 .channels_lastChannelBanner{
-    position: absolute;
+   
     z-index: 1;
-    height: 80px;
-    left: 70px;
+    width: 100%;
 }
 
 .channels_lastChannelTitle{
