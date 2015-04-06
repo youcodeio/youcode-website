@@ -403,6 +403,7 @@
     margin-left: -12px;
     height: 100%;
     position: relative;
+    background-color: white;
 }
 
 .channels_channelBanner{
@@ -436,6 +437,7 @@
 
 .channels_lastChannelLogo{
     height: 100%;
+
 }
 
 .channels_lastChannelLogoImage{
@@ -443,6 +445,7 @@
     height: 100%;
     position: relative;
     z-index: 3;
+    background-color: white;
 }
 
 .channels_lastChannelBanner{
