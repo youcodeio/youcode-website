@@ -1,6 +1,6 @@
 angular.module('youcodeio.controllers.channels', [])
 
-	.controller('ChannelsCtrl', function ($q, $scope, googleService) {
+	.controller('ChannelsCtrl', function ($q, $scope, googleService, $location) {
 	$scope.channels = [];
 	$scope.query = "";
 	var alarmUrl = "http://s.ytimg.com/yts/img/channels/c4/default_banner-vfl7DRgTn.png";
@@ -69,6 +69,8 @@ angular.module('youcodeio.controllers.channels', [])
 
 	$scope.changePrimary = function(channelObject){
 		$scope.show_channel = channelObject;
+		$("html, body").animate({scrollTop: "#top"}, "slow");
+
 	};
 
 	$scope.formatDate = function (date){
