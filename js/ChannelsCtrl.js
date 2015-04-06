@@ -3,6 +3,7 @@ angular.module('youcodeio.controllers.channels', [])
 	.controller('ChannelsCtrl', function ($q, $scope, googleService, $location) {
 	$scope.channels = [];
 	$scope.query = "";
+	$scope.lastChannelPosted;
 	var alarmUrl = "http://s.ytimg.com/yts/img/channels/c4/default_banner-vfl7DRgTn.png";
 
 		console.log("initiate");
@@ -28,7 +29,8 @@ angular.module('youcodeio.controllers.channels', [])
 			});
 			$q.all(savePromises).then(function(data){
 				$scope.parsingResults(data, d);
-				$scope.show_channel = $scope.channels[0];
+				$scope.getLastPostedChannel($scope.channels);
+				$scope.show_channel = $scope.channels[$scope.lastChannelPosted];
 			});
 		});
 	
@@ -74,6 +76,18 @@ angular.module('youcodeio.controllers.channels', [])
 
 	$scope.formatDate = function (date){
 		return 	moment(date.getTime(), "x").fromNow();
+	};
+
+	$scope.getLastPostedChannel = function(channelList){
+		var lastPostedDate = channelList[0].channel_video[0].video_publishedAt;
+		angular.forEach(channelList, function(result, key){
+			var items = result;
+			angular.forEach(items.channel_video, function(video){
+				if(video.video_publishedAt.getTime() > lastPostedDate.getTime()){
+					$scope.lastChannelPosted = key;
+				}
+			});
+		});
 	};
 });
 
