@@ -40,7 +40,7 @@ angular.module('youcodeio.controllers.channels', [])
 
 		angular.forEach(data, function(value,key) {
 			if(alarmUrl===d[key].items[0].brandingSettings.image.bannerImageUrl){
-				d[key].items[0].brandingSettings.image.bannerImageUrl = "img/default_banner.png";
+				d[key].items[0].brandingSettings.image.bannerImageUrl = "img/default_banner.jpg";
 			}
 			$scope.channels[key] = {
 					channel_name:d[key].items[0].snippet.title,
