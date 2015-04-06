@@ -61,19 +61,7 @@ angular.module('youcodeio.controllers.channels', [])
 	};
 
 	$scope.changePrimary = function(channelObject){
-		console.log(channelObject);
 		$scope.show_channel = channelObject;
-		
-		console.log($scope.show_channel);
-	};
-});
-
-app.directive('backImg', function(){
-	return function(scope, elements, attrs){
-		var url = attrs.backImg;
-		element.css({
-    		'background-image': 'url(' + url +')'
-		});
 	};
 });
 
