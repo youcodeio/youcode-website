@@ -13,14 +13,14 @@
     <div class="col s12 m8 l6 channels_lastChannelsWhoPublishedLastVideo" ng-if="!unicorn">
       <div class="card channels_lastChannelsWhoPublishedLastVideo">
         <div class="channels_lastChannel">
+          <img class="channels_lastChannelBanner" src="{{show_channel.channel_banner}}">
         <div class="col m6 l4 channels_lastChannelLogo">
           <img class="channels_lastChannelLogoImage z-depth-2" src="{{show_channel.channel_logo.url}}">
         </div>
         <div class="channels_lastChannelTitle red">
           {{show_channel.channel_name}}
         </div>
-        <div class="channels_lastChannelBanner" back-img="{{show_channel.channel_banner}}">
-        </div>
+        
         <!-- content : 2 last videos -->
         <div class="col s12 m12 l12 ">
           <div class="col s3 m3 l3 waves-block waves-effect waves-light">
@@ -72,20 +72,32 @@
             <i class="mdi-content-add white-text small"></i>
           </a>
         </div>
+        <img class="channels_channelBanner" src="{{channel.channel_banner}}">
         <div class="col m6 l4 channels_channelLogo">
           <img class="channels_channelLogoImage" src="{{channel.channel_logo.url}}">
         </div>
         <div class="channels_channelTitle red">
           {{channel.channel_name}}
         </div>
-        <div class="channels_channelBanner" ng-style="{'background-image': 'url({{channel.channel_banner}})'}">
-        </div>
+        
       </div>
     </div>
   </div> 
-  <script type="text/javascript">
-  function showScope(channel){
-    console.log(channel);
-  }
-  </script> 
 </div>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

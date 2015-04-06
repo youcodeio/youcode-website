@@ -395,18 +395,20 @@
 
 .channels_channelLogo{
     height: 100%;
+    position: relative;
+    z-index: 3;
 }
 
 .channels_channelLogoImage{
     margin-left: -12px;
     height: 100%;
+    position: relative;
 }
 
 .channels_channelBanner{
+    position: absolute;
     height: 100%;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+    z-index: 1;
 }
 
 .channels_channelTitle{
@@ -414,6 +416,8 @@
     color: white;
     font-size: 0.8em;
     font-weight: 300;
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -437,18 +441,22 @@
 .channels_lastChannelLogoImage{
     margin-left: -12px;
     height: 100%;
+    position: relative;
+    z-index: 3;
 }
 
 .channels_lastChannelBanner{
-    height: 100%;
-    background-size: 160%;
-    background-repeat: no-repeat;
-    background-position: center;
+    position: absolute;
+    z-index: 1;
+    height: 80px;
+    left: 70px;
 }
 
 .channels_lastChannelTitle{
     text-align: center;
     color: white;
+    position: relative;
+    z-index: 2;
 }
 
 .channels_latsChannelYoutubeButton{
