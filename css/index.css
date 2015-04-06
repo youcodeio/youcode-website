@@ -404,7 +404,6 @@
 
 .channels_channelBanner{
     height: 100%;
-    /*background-image: url(../img/ailye_banner.png);*/
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -442,7 +441,6 @@
 
 .channels_lastChannelBanner{
     height: 100%;
-    background-image: url(../img/ailye_banner.png);
     background-size: 160%;
     background-repeat: no-repeat;
     background-position: center;

@@ -9,52 +9,52 @@
     </div>
   </div>
   <div class="row">
-  <!-- cards latest published viedeo -->
-    <div class="col s12 m8 l6 channels_lastChannelsWhoPublishedLastVideo">
+    <!-- cards latest published video -->
+    <div class="col s12 m8 l6 channels_lastChannelsWhoPublishedLastVideo" ng-if="!unicorn">
       <div class="card channels_lastChannelsWhoPublishedLastVideo">
         <div class="channels_lastChannel">
         <div class="col m6 l4 channels_lastChannelLogo">
-          <img class="channels_lastChannelLogoImage z-depth-2" src="{{channel.channel_logo.url}}">
+          <img class="channels_lastChannelLogoImage z-depth-2" src="{{show_channel.channel_logo.url}}">
         </div>
         <div class="channels_lastChannelTitle red">
-          {{channel.channel_name}}
+          {{show_channel.channel_name}}
         </div>
-        <div class="channels_lastChannelBanner">
+        <div class="channels_lastChannelBanner" back-img="{{show_channel.channel_banner}}">
         </div>
         <!-- content : 2 last videos -->
         <div class="col s12 m12 l12 ">
           <div class="col s3 m3 l3 waves-block waves-effect waves-light">
-            <a class="" href="" target="_blank">
-              <img class=" channels_lastChannelVideoThumbnail z-depth-1 " src="../img/thumbnail.png">
+            <a class="" href="{{show_channel.channel_video[0].video_link}}" target="_blank">
+              <img class=" channels_lastChannelVideoThumbnail z-depth-1 " src="{{show_channel.channel_video[0].video_thumbnails.high.url}}">
               <div class="waves-effect waves-light red z-depth-1 channels_latsChannelYoutubeButton white-text">YOUTUBE</div>
             </a>
           </div>
 
           <p class="channels_lastChannelVideoTitle col s9 m9 l9">
-              HTML5Devconf May 2014: Rob Dodson, Google: Polymer,the Gateway Drug to Designer-Developer Happiness
+              {{show_channel.channel_video[0].video_title}}
             <span class="channels_lastChannelVideoDescription">
-              This is a talk from Barcelona FutureJS 2014 (http://futurejs.org). JavaScript is an incredibly versatile language and one of my favorites for rapidly building fun ...
+              {{show_channel.channel_video[0].video_desc}}
             </span>
             <span class="channels_lastChannelVideoPublishedAt red-text right">
-              publishet At
+              publishet At {{show_channel.channel_video[0].video_publishedAt}}
             </span>
           </p>
         </div>
         
         <div class="col s12 m12 l12">
           <div class="col s3 m3 l3 waves-block waves-effect waves-light">
-            <a class="" href="" target="_blank">
-              <img class="channels_lastChannelVideoThumbnail z-depth-1" src="../img/thumbnail.png">
+            <a class="" href="{{show_channel.channel_video[1].video_link}}" target="_blank">
+              <img class="channels_lastChannelVideoThumbnail z-depth-1" src="{{show_channel.channel_video[1].video_thumbnails.high.url}}">
               <div class="waves-effect waves-light red z-depth-1 channels_latsChannelYoutubeButton white-text">YOUTUBE</div>
             </a>
           </div>
           <p class="channels_lastChannelVideoTitle col s9 m9 l9">
-              HTML5Devconf May 2014: Rob Dodson, Google: Polymer,the Gateway Drug to Designer-Developer Happiness
+              {{show_channel.channel_video[1].video_title}}
             <span class="channels_lastChannelVideoDescription">
-              This is a talk from Barcelona FutureJS 2014 (http://futurejs.org). JavaScript is an incredibly versatile language and one of my favorites for rapidly building fun ...
+              {{show_channel.channel_video[1].video_desc}}
             </span>
             <span class="channels_lastChannelVideoPublishedAt red-text right">
-              publishet At
+              publishet At {{show_channel.channel_video[1].video_publishedAt}}
             </span>
           </p>
         </div>
@@ -65,10 +65,10 @@
     <div class="col s6 m4 l3 " ng-repeat="channel in channels track by $index">
       <div class="card channels" ng-mouseenter="channels_show = true" ng-mouseleave="channels_show = false">
         <div class="channels_cardHover" ng-if="channels_show">
-          <a href="" class="col s12 m12 l12 channels_lastChannelIconeView  waves-effect waves-light">
+          <a target="_blank" href="{{channel.channel_link}}" class="col s12 m12 l12 channels_lastChannelIconeView  waves-effect waves-light">
             <i class="mdi-action-visibility white-text small "></i>
           </a>
-          <a href="" class="col s12 m12 l12 channels_lastChannelIconePlus  waves-effect waves-light">
+          <a href="" ng-click="changePrimary(channel);" class="col s12 m12 l12 channels_lastChannelIconePlus  waves-effect waves-light">
             <i class="mdi-content-add white-text small"></i>
           </a>
         </div>
@@ -82,5 +82,10 @@
         </div>
       </div>
     </div>
-  </div>  
+  </div> 
+  <script type="text/javascript">
+  function showScope(channel){
+    console.log(channel);
+  }
+  </script> 
 </div>  
