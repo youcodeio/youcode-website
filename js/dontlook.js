@@ -1,2 +1,2 @@
 var APIKEY;
-APIKEY = "AIzaSyBCyM1fBoxcEQCa9FHnx0othC3mGKIlkJg";
+APIKEY = "KEY";
