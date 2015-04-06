@@ -42,10 +42,14 @@ angular.module('youcodeio.controllers.channels', [])
 			if(alarmUrl===d[key].items[0].brandingSettings.image.bannerImageUrl){
 				d[key].items[0].brandingSettings.image.bannerImageUrl = "img/default_banner.jpg";
 			}
+			if(d[key].items[0].brandingSettings.image.bannerMobileHdImageUrl===undefined){
+				d[key].items[0].brandingSettings.image.bannerMobileHdImageUrl = "img/default_banner.jpg";
+			}
 			$scope.channels[key] = {
 					channel_name:d[key].items[0].snippet.title,
 					channel_logo: d[key].items[0].snippet.thumbnails.high,
 					channel_banner: d[key].items[0].brandingSettings.image.bannerImageUrl,
+					channel_mobileBanner: d[key].items[0].brandingSettings.image.bannerMobileHdImageUrl,
 					channel_link: "https://www.youtube.com/channel/"+d[key].items[0].id,
 					channel_video: []
 				};
