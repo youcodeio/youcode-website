@@ -114,5 +114,9 @@ var youtube_talks = [
     {
         "name": "GoogleTechTalks",
         "id": "UCtXKDgv1AVoG88PLl8nGXmw"
+    },
+    {
+        "name": "Confreaks",
+        "id": "UCWnPjmqvljcafA0z2U1fwKQ"
     }
 ]
