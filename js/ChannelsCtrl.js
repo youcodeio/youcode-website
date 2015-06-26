@@ -79,6 +79,7 @@ angular.module('youcodeio.controllers.channels', [])
 	};
 
 	$scope.getLastPostedChannel = function(channelList){
+		$scope.lastChannelPosted = 0
 		var lastPostedDate = channelList[0].channel_video[0].video_publishedAt;
 		angular.forEach(channelList, function(result, key){
 			var items = result;

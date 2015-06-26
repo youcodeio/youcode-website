@@ -4,6 +4,10 @@ var youtube_talks = [
         "id": "UCVHFbqXqoYvEWM1Ddxl0QDg"
     },
     {
+        "name": "Team BDXIO",
+        "id": "UCA7pEYY0BlgCdpbnjhCDezQ"
+    },
+    {
         "name": "Cloudera, Inc.",
         "id": "UCXY5wm6HlBL_Y_8SDxJNR0g"
     },
