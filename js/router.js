@@ -5,7 +5,8 @@ var routerApp = angular.module('youcodeio', ['ui.router',
                                             'youcodeio.services',
                                             'youcodeio.controllers.header',
                                             'youcodeio.controllers.conf',
-                                            'youcodeio.controllers.data']);
+                                            'youcodeio.controllers.data',
+                                            'youcodeio.controllers.about']);
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
     
@@ -38,7 +39,8 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
         .state('about', {
             url: '/about',
-            templateUrl: 'partials/about.html'
+            templateUrl: 'partials/about.html',
+            controller: 'AboutCtrl'
         })
 
         .state('data', {
