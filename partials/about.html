@@ -1,24 +1,17 @@
-<div class="container">
-  <!-- Page Content goes here -->
-  <h1 class="index_construction">This page is under construction</h1>
-  <center>
-      <img src="img/construction.png" alt="logo construction">
-  </center>
-</div>
 <div class="row container">
   <div class="explanation">
   <h3 class="center-align about_title">Who are we?</h3>
   </div>
-  <!-- Pierre's Card -->
-  <div class="col s12 m12 l12" ng-repeat="aboutDetail in aboutDetails">
-    <div class=" text-grey text-darken-3 blue">
-      <div class="col s12 m4 l4 red">
-        <center><img class="about_images responsive-img us_photo" ng-src="{{aboutDetail.image}}"></center>
-        <span class="card-title about_cardTitle col s12 m12 l12">{{aboutDetail.name}}</span>
-      </div> 
-      <p class="about_teamDescription col s12 m8 l8"> {{ aboutDetail.description }} </p>
-      <div class="col s12 m8 l8" ng-repeat="link in aboutDetail.link">
-        <a class="red-text" target="_blank" ng-href="{{link.href}}"> {{link.title}} </a>
+  <!-- Card -->
+  <div class="col s12 m12 l12 card-about" ng-repeat="aboutDetail in aboutDetails">
+    <div class=" text-grey text-darken-3 ">
+      <span class="card-title about_cardTitle col s12 m4 l4">{{aboutDetail.name}}</span>
+      <div class="col s12 l12 m12">
+        <div class="col s12 m4 l4 card-about">
+          <center><img class="about_images responsive-img us_photo about_cardTwitter" ng-src="{{aboutDetail.image}}"></center>
+        </div> 
+        <p class="about_teamDescription col s12 m8 l8"> {{ aboutDetail.description }} </p>
+          <a class="waves-effect waves-light btn right white-text col s12 m2 l2 about_link about_link--button red" ng-repeat="link in aboutDetail.link" target="_blank" ng-href="{{link.href}}"> {{link.title}} </a>
       </div>
     </div>
   </div>
