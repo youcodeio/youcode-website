@@ -344,7 +344,24 @@
 */
 /*CSS Youcode pour le fichier conferences.html*/
 
+.conferences_link{
+    margin-top: 50px;
+    margin-right: 1px;
+    margin-left: 1px;
+}
 
+.conferences_collection{
+    margin-bottom: 80px;
+}
+
+.conferences_title{
+    font-weight: 100;
+}
+
+.conferences_details{
+    font-size: 1.2em;
+    font-weight: 300;
+}
 /*
 -------------------------------------------------------------------
 -------------------------------------------------------------------
