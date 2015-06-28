@@ -4,6 +4,10 @@ var youtube_talks = [
         "id": "UCVHFbqXqoYvEWM1Ddxl0QDg"
     },
     {
+        "name": "Docker",
+        "id": "UC76AVf2JkrwjxNKMuPpscHQ"
+    },
+    {
         "name": "Team BDXIO",
         "id": "UCA7pEYY0BlgCdpbnjhCDezQ"
     },
